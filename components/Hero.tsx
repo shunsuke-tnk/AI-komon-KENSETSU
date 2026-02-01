@@ -16,7 +16,7 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Large Background Text */}
-            <div className="absolute top-1/2 left-0 w-full -translate-y-1/2 overflow-hidden opacity-20 pointer-events-none select-none z-0">
+            <div className="absolute top-1/2 left-0 w-full -translate-y-1/2 overflow-hidden opacity-70 pointer-events-none select-none z-0">
                 <div className="whitespace-nowrap text-[20vw] font-black leading-none text-outline animate-marquee">
                     CONSTRUCTION AI ADVISOR DIGITAL TRANSFORMATION
                 </div>
@@ -31,8 +31,8 @@ export const Hero: React.FC = () => {
                     </div>
 
                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tighter mb-10 mix-blend-difference">
-                        建設業<br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-400 to-zinc-600">AI顧問</span>
+                        建設業のための<br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-400 to-zinc-600">AI顧問サービス</span>
                     </h1>
 
                     <p className="text-zinc-400 text-lg md:text-xl max-w-2xl leading-relaxed mb-12 border-l border-zinc-800 pl-6">
