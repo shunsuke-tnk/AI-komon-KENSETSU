@@ -32,7 +32,7 @@ export const Hero: React.FC = () => {
 
                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tighter mb-10 mix-blend-difference">
                         建設業のための<br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-400 to-zinc-600">AI顧問サービス</span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600">AI顧問サービス</span>
                     </h1>
 
                     <p className="text-zinc-400 text-lg md:text-xl max-w-2xl leading-relaxed mb-12 border-l border-zinc-800 pl-6">
