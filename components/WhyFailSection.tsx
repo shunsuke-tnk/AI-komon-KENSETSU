@@ -5,13 +5,21 @@ import { AlertTriangle, Target, Users } from 'lucide-react';
 export const WhyFailSection: React.FC = () => {
   return (
     <Section id="why-fail">
-      <div className="mb-16">
-        <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-4">WHY FAIL</h2>
-        <p className="text-orange-500 font-bold tracking-widest text-base">なぜ多くの会社がAI導入に失敗するのか</p>
+      <div className="mb-16 relative">
+        {/* 背景の WHY FAIL */}
+        <span className="absolute -top-4 left-0 text-[8rem] md:text-[12rem] font-black tracking-tighter text-white/5 select-none pointer-events-none leading-none">
+          WHY FAIL
+        </span>
+        {/* 前面のタイトル */}
+        <h2 className="relative text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+          なぜ、多くの会社が<br />
+          <span className="text-orange-500">AI導入に失敗する</span>のか
+        </h2>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-        {/* Left Column: The Problem */}
+      {/* Row 1: 左にテキスト / 右に画像 */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-24">
+        {/* Left: Text Content */}
         <div className="space-y-12">
           {/* 多くの人が想像する"効率化" */}
           <div className="border-l-2 border-zinc-700 pl-8">
@@ -51,8 +59,31 @@ export const WhyFailSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Right Column: The Solution */}
-        <div className="space-y-12">
+        {/* Right: Image Placeholder */}
+        <div className="aspect-[4/3] bg-zinc-900 border border-white/10 flex items-center justify-center">
+          <div className="text-center text-zinc-600">
+            <div className="w-16 h-16 mx-auto mb-4 border-2 border-zinc-700 rounded-lg flex items-center justify-center">
+              <span className="text-2xl">📊</span>
+            </div>
+            <p className="text-sm">画像を配置</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Row 2: 左に画像 / 右にテキスト */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        {/* Left: Image Placeholder */}
+        <div className="aspect-[4/3] bg-zinc-900 border border-white/10 flex items-center justify-center order-2 lg:order-1">
+          <div className="text-center text-zinc-600">
+            <div className="w-16 h-16 mx-auto mb-4 border-2 border-zinc-700 rounded-lg flex items-center justify-center">
+              <span className="text-2xl">🤝</span>
+            </div>
+            <p className="text-sm">画像を配置</p>
+          </div>
+        </div>
+
+        {/* Right: Text Content */}
+        <div className="space-y-12 order-1 lg:order-2">
           {/* でも、アプリや外注では解決しない */}
           <div className="border border-white/10 p-8 bg-black">
             <h3 className="text-2xl font-bold mb-6 text-white">でも、アプリや外注では解決しない</h3>
