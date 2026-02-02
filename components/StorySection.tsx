@@ -6,9 +6,16 @@ export const StorySection: React.FC = () => {
     return (
         <Section className="bg-black p-0" id="story">
             {/* Header */}
-            <div className="px-6 md:px-20 py-16 border-b border-white/10">
-                <h2 className="text-5xl md:text-7xl font-black mb-2 tracking-tighter">WHY ME</h2>
-                <p className="text-base font-mono text-zinc-500">なぜ私が建設業に特化するのか</p>
+            <div className="px-6 md:px-20 py-16 border-b border-white/10 relative">
+                {/* 背景の WHY ME */}
+                <span className="absolute top-1/2 -translate-y-1/2 left-6 md:left-20 text-[8rem] md:text-[12rem] font-black tracking-tighter text-white/5 select-none pointer-events-none leading-none">
+                    WHY ME
+                </span>
+                {/* 前面のタイトル */}
+                <h2 className="relative text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                    なぜ、私が<br />
+                    <span className="text-orange-500">建設業に特化する</span>のか
+                </h2>
             </div>
 
             {/* Main Story Content */}
