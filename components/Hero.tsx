@@ -42,12 +42,12 @@ export const Hero: React.FC = () => {
 
                     {/* Sub Copy */}
                     <div className="border-l-2 border-orange-500 pl-6 mb-10">
-                        <p className="text-zinc-300 text-base md:text-lg leading-relaxed mb-3">
+                        <p className="text-zinc-300 text-lg md:text-xl leading-relaxed mb-3">
                             <span className="text-white font-bold">複数回全国トップセールス獲得</span>
                             <span className="text-zinc-500 mx-2">・</span>
                             <span className="text-white font-bold">5年連続 個人年間売上2億円</span>
                         </p>
-                        <p className="text-zinc-400 text-base md:text-lg leading-relaxed">
+                        <p className="text-zinc-400 text-lg md:text-xl leading-relaxed">
                             建設業の現場を知り尽くしたAI専門家が、<br className="hidden md:block" />
                             御社のAI活用を<span className="text-orange-500 font-bold">0から伴走支援</span>します。
                         </p>
@@ -57,7 +57,7 @@ export const Hero: React.FC = () => {
                         <Button size="lg" icon>
                             無料AI活用診断に申し込む
                         </Button>
-                        <div className="flex items-center gap-2 text-zinc-500 text-sm">
+                        <div className="flex items-center gap-2 text-zinc-500 text-base">
                             <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
                             毎月3社限定・Zoom 30分
                         </div>
@@ -65,19 +65,19 @@ export const Hero: React.FC = () => {
                 </div>
 
                 <div className="lg:col-span-4 flex flex-col justify-end items-start lg:items-end">
-                    <div className="glass-card p-6 border border-white/10 bg-zinc-900/50 backdrop-blur-md max-w-xs">
-                        <div className="text-xs text-zinc-500 mb-3 uppercase tracking-wider font-mono">こんな方へ</div>
-                        <ul className="space-y-3 text-sm font-medium">
+                    <div className="glass-card p-6 border border-white/10 bg-zinc-900/50 backdrop-blur-md max-w-sm">
+                        <div className="text-sm text-zinc-500 mb-3 uppercase tracking-wider font-mono">こんな方へ</div>
+                        <ul className="space-y-4 text-base font-medium">
                             <li className="flex items-center gap-3">
-                                <ArrowDownRight className="text-orange-500 shrink-0" size={16} />
+                                <ArrowDownRight className="text-orange-500 shrink-0" size={18} />
                                 <span>AIを使いたいが何から始めればいいかわからない</span>
                             </li>
                             <li className="flex items-center gap-3">
-                                <ArrowDownRight className="text-orange-500 shrink-0" size={16} />
+                                <ArrowDownRight className="text-orange-500 shrink-0" size={18} />
                                 <span>見積もり・日報作成の時間を短縮したい</span>
                             </li>
                             <li className="flex items-center gap-3">
-                                <ArrowDownRight className="text-orange-500 shrink-0" size={16} />
+                                <ArrowDownRight className="text-orange-500 shrink-0" size={18} />
                                 <span>若手にAIを教えられる人がいない</span>
                             </li>
                         </ul>

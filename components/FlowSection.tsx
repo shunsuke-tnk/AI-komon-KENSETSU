@@ -41,11 +41,11 @@ export const FlowSection: React.FC = () => {
         {/* Left: Contract Terms */}
         <div className="lg:w-1/3">
           <h2 className="text-5xl font-black tracking-tighter mb-8">FLOW</h2>
-          <p className="text-zinc-500 text-sm mb-8">契約条件・ご利用の流れ</p>
+          <p className="text-zinc-500 text-base mb-8">契約条件・ご利用の流れ</p>
 
           <div className="p-6 border border-white/10 bg-zinc-900/30">
-            <h3 className="text-sm font-bold text-orange-500 mb-6 tracking-widest uppercase">Contract Terms</h3>
-            <div className="space-y-4 text-sm">
+            <h3 className="text-base font-bold text-orange-500 mb-6 tracking-widest uppercase">Contract Terms</h3>
+            <div className="space-y-4 text-base">
               {contractTerms.map((term, index) => (
                 <div key={index} className="flex justify-between border-b border-white/5 pb-3">
                   <span className="text-zinc-500">{term.label}</span>
@@ -57,7 +57,7 @@ export const FlowSection: React.FC = () => {
 
           {/* Trial Period Note */}
           <div className="mt-6 p-4 bg-orange-500/10 border border-orange-500/30">
-            <p className="text-sm text-zinc-300">
+            <p className="text-base text-zinc-300">
               <span className="text-orange-500 font-bold">試用期間について：</span><br />
               最初の1ヶ月は「試用期間」です。万が一「合わない」と感じた場合は、1ヶ月で終了可能です。
             </p>
@@ -79,16 +79,16 @@ export const FlowSection: React.FC = () => {
                     : 'bg-black border-zinc-500 group-hover:bg-orange-500 group-hover:border-orange-500'
                 } transition-colors`}></div>
 
-                <div className="text-xs font-mono text-orange-500 mb-2">STEP {item.step}</div>
+                <div className="text-sm font-mono text-orange-500 mb-2">STEP {item.step}</div>
                 <h4 className={`text-2xl font-bold mb-3 ${
                   item.highlight ? 'text-orange-500' : 'group-hover:text-orange-500'
                 } transition-colors`}>
                   {item.title}
                 </h4>
-                <p className="text-zinc-400 leading-relaxed">{item.desc}</p>
+                <p className="text-zinc-400 leading-relaxed text-lg">{item.desc}</p>
 
                 {item.highlight && (
-                  <div className="mt-4 inline-block px-3 py-1 bg-orange-500/20 border border-orange-500/30 text-orange-500 text-xs font-bold">
+                  <div className="mt-4 inline-block px-3 py-1 bg-orange-500/20 border border-orange-500/30 text-orange-500 text-sm font-bold">
                     無料・押し売り一切なし
                   </div>
                 )}

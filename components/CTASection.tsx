@@ -10,7 +10,7 @@ export const CTASection: React.FC = () => {
       <div className="max-w-[1200px] mx-auto relative z-10">
         {/* Main Content */}
         <div className="text-center mb-12">
-          <p className="font-bold tracking-widest mb-4 uppercase text-sm">Next Step</p>
+          <p className="font-bold tracking-widest mb-4 uppercase text-base">Next Step</p>
           <h2 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] mb-8">
             まずは無料診断から
           </h2>
@@ -18,14 +18,14 @@ export const CTASection: React.FC = () => {
 
         {/* Message */}
         <div className="max-w-2xl mx-auto text-center mb-12">
-          <p className="text-xl md:text-2xl font-medium leading-relaxed mb-6">
+          <p className="text-2xl md:text-3xl font-medium leading-relaxed mb-6">
             「何を導入すべきかわからない」<br />
             「どこを改善すべきかわからない」
           </p>
-          <p className="text-lg opacity-90">
+          <p className="text-xl opacity-90">
             そんな状態で大丈夫です。
           </p>
-          <p className="text-xl font-bold mt-4">
+          <p className="text-2xl font-bold mt-4">
             大事なのは、「どこを直すべきか」を知ること。<br />
             それがわかれば、あとは一つずつ進めるだけです。
           </p>
@@ -34,26 +34,26 @@ export const CTASection: React.FC = () => {
         {/* What You Get */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto mb-12">
           <div className="bg-black/20 p-6 text-center">
-            <Video className="mx-auto mb-3" size={28} />
-            <p className="font-bold">Zoomで実施</p>
-            <p className="text-sm opacity-80 mt-1">30分・オンライン</p>
+            <Video className="mx-auto mb-3" size={32} />
+            <p className="font-bold text-lg">Zoomで実施</p>
+            <p className="text-base opacity-80 mt-1">30分・オンライン</p>
           </div>
           <div className="bg-black/20 p-6 text-center">
-            <MessageSquare className="mx-auto mb-3" size={28} />
-            <p className="font-bold">業務ヒアリング</p>
-            <p className="text-sm opacity-80 mt-1">御社の課題を把握</p>
+            <MessageSquare className="mx-auto mb-3" size={32} />
+            <p className="font-bold text-lg">業務ヒアリング</p>
+            <p className="text-base opacity-80 mt-1">御社の課題を把握</p>
           </div>
           <div className="bg-black/20 p-6 text-center">
-            <CheckCircle className="mx-auto mb-3" size={28} />
-            <p className="font-bold">改善点を提示</p>
-            <p className="text-sm opacity-80 mt-1">優先順位もお伝え</p>
+            <CheckCircle className="mx-auto mb-3" size={32} />
+            <p className="font-bold text-lg">改善点を提示</p>
+            <p className="text-base opacity-80 mt-1">優先順位もお伝え</p>
           </div>
         </div>
 
         {/* Important Note */}
         <div className="flex items-center justify-center gap-3 mb-12">
-          <XCircle size={20} />
-          <p className="font-bold">押し売りは一切ありません。診断だけでもOK。</p>
+          <XCircle size={24} />
+          <p className="font-bold text-lg">押し売りは一切ありません。診断だけでもOK。</p>
         </div>
 
         {/* CTA Button */}
@@ -66,7 +66,7 @@ export const CTASection: React.FC = () => {
           >
             無料AI活用診断に申し込む
           </Button>
-          <p className="mt-4 text-sm font-bold opacity-70">
+          <p className="mt-4 text-base font-bold opacity-70">
             ※ 毎月3社限定 / Zoom 30分
           </p>
         </div>

@@ -16,20 +16,20 @@ const comparisonItems = [
 
 const renderCell = (value: string, note?: string) => {
   if (value === 'full') {
-    return <Check className="text-orange-500 mx-auto" size={20} />;
+    return <Check className="text-orange-500 mx-auto" size={24} />;
   }
   if (value === 'partial') {
     return (
       <div className="flex flex-col items-center">
-        <Circle className="text-orange-500/60 mx-auto" size={16} />
-        {note && <span className="text-xs text-zinc-500 mt-1">{note}</span>}
+        <Circle className="text-orange-500/60 mx-auto" size={20} />
+        {note && <span className="text-sm text-zinc-500 mt-1">{note}</span>}
       </div>
     );
   }
   if (value === 'none') {
-    return <Minus className="text-zinc-600 mx-auto" size={20} />;
+    return <Minus className="text-zinc-600 mx-auto" size={24} />;
   }
-  return <span className="text-sm font-medium">{value}</span>;
+  return <span className="text-base font-medium">{value}</span>;
 };
 
 export const ComparisonTableSection: React.FC = () => {
@@ -37,7 +37,7 @@ export const ComparisonTableSection: React.FC = () => {
     <Section id="comparison">
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-4">COMPARISON</h2>
-        <p className="text-zinc-500 font-mono uppercase text-sm">プラン比較表</p>
+        <p className="text-zinc-500 font-mono uppercase text-base">プラン比較表</p>
       </div>
 
       <div className="max-w-5xl mx-auto overflow-x-auto">
@@ -46,17 +46,17 @@ export const ComparisonTableSection: React.FC = () => {
           <thead>
             <tr>
               <th className="p-4 text-left bg-zinc-900 border border-white/10 w-1/4">
-                <span className="text-zinc-400 text-sm font-mono">項目</span>
+                <span className="text-zinc-400 text-base font-mono">項目</span>
               </th>
               <th className="p-4 text-center bg-zinc-900 border border-white/10">
-                <span className="text-white font-bold text-sm">伴走プラン</span>
+                <span className="text-white font-bold text-base">伴走プラン</span>
               </th>
               <th className="p-4 text-center bg-orange-500/20 border-2 border-orange-500">
-                <span className="text-orange-500 font-bold text-sm">自走プラン</span>
-                <span className="block text-xs text-orange-400 mt-1">おすすめ</span>
+                <span className="text-orange-500 font-bold text-base">自走プラン</span>
+                <span className="block text-sm text-orange-400 mt-1">おすすめ</span>
               </th>
               <th className="p-4 text-center bg-zinc-900 border border-white/10">
-                <span className="text-white font-bold text-sm">エージェント開発</span>
+                <span className="text-white font-bold text-base">エージェント開発</span>
               </th>
             </tr>
           </thead>
@@ -66,7 +66,7 @@ export const ComparisonTableSection: React.FC = () => {
             {comparisonItems.map((item, index) => (
               <tr key={index} className="hover:bg-white/5 transition-colors">
                 <td className="p-4 bg-zinc-900/50 border border-white/10">
-                  <span className="text-zinc-300 text-sm">{item.label}</span>
+                  <span className="text-zinc-300 text-base">{item.label}</span>
                 </td>
                 <td className="p-4 text-center border border-white/10">
                   {renderCell(item.bansou)}
@@ -83,16 +83,16 @@ export const ComparisonTableSection: React.FC = () => {
             {/* Recommendation Row */}
             <tr className="bg-zinc-800/50">
               <td className="p-4 border border-white/10">
-                <span className="text-orange-500 text-sm font-bold">おすすめ</span>
+                <span className="text-orange-500 text-base font-bold">おすすめ</span>
               </td>
               <td className="p-4 text-center border border-white/10">
-                <span className="text-zinc-400 text-xs">AI活用を<br />始めたい方</span>
+                <span className="text-zinc-400 text-sm">AI活用を<br />始めたい方</span>
               </td>
               <td className="p-4 text-center border-x-2 border-orange-500/50 bg-orange-500/10">
-                <span className="text-white text-xs font-medium">社内にAIチームを<br />作りたい方</span>
+                <span className="text-white text-sm font-medium">社内にAIチームを<br />作りたい方</span>
               </td>
               <td className="p-4 text-center border border-white/10">
-                <span className="text-zinc-400 text-xs">具体的なツールが<br />欲しい方</span>
+                <span className="text-zinc-400 text-sm">具体的なツールが<br />欲しい方</span>
               </td>
             </tr>
           </tbody>
@@ -100,17 +100,17 @@ export const ComparisonTableSection: React.FC = () => {
       </div>
 
       {/* Legend */}
-      <div className="mt-8 flex justify-center gap-8 text-sm text-zinc-500">
+      <div className="mt-8 flex justify-center gap-8 text-base text-zinc-500">
         <div className="flex items-center gap-2">
-          <Check className="text-orange-500" size={16} />
+          <Check className="text-orange-500" size={20} />
           <span>対応</span>
         </div>
         <div className="flex items-center gap-2">
-          <Circle className="text-orange-500/60" size={14} />
+          <Circle className="text-orange-500/60" size={18} />
           <span>一部対応</span>
         </div>
         <div className="flex items-center gap-2">
-          <Minus className="text-zinc-600" size={16} />
+          <Minus className="text-zinc-600" size={20} />
           <span>非対応</span>
         </div>
       </div>

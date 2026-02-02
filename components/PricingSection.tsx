@@ -54,7 +54,7 @@ export const PricingSection: React.FC = () => {
     <Section id="pricing">
       <div className="text-center mb-16">
         <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-4">PLANS</h2>
-        <p className="text-zinc-500 font-mono uppercase text-sm">3つのプランからお選びいただけます</p>
+        <p className="text-zinc-500 font-mono uppercase text-base">3つのプランからお選びいただけます</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -68,38 +68,38 @@ export const PricingSection: React.FC = () => {
             }`}
           >
             {plan.isPopular && (
-              <div className="absolute top-0 right-0 bg-orange-500 text-black text-xs font-bold px-3 py-1">
+              <div className="absolute top-0 right-0 bg-orange-500 text-black text-sm font-bold px-3 py-1">
                 RECOMMENDED
               </div>
             )}
 
-            <h3 className={`text-xl font-bold mb-1 ${plan.isPopular ? 'text-orange-500' : ''}`}>
+            <h3 className={`text-2xl font-bold mb-1 ${plan.isPopular ? 'text-orange-500' : ''}`}>
               {plan.name}
             </h3>
-            <p className="text-zinc-500 text-sm mb-6">{plan.tagline}</p>
+            <p className="text-zinc-500 text-base mb-6">{plan.tagline}</p>
 
             <div className="mb-6 pb-6 border-b border-white/10">
               <div className="flex items-baseline gap-2">
-                <span className="text-zinc-600 line-through text-sm">¥{plan.price}</span>
+                <span className="text-zinc-600 line-through text-base">¥{plan.price}</span>
               </div>
               <div className="flex items-baseline gap-2">
                 <span className="text-3xl md:text-4xl font-black text-white">¥{plan.discountPrice}</span>
-                <span className="text-xs text-zinc-500 font-mono">/ MONTH</span>
+                <span className="text-sm text-zinc-500 font-mono">/ MONTH</span>
               </div>
-              <p className="text-xs text-orange-500 mt-2">モニター価格</p>
+              <p className="text-sm text-orange-500 mt-2">モニター価格</p>
             </div>
 
             <ul className="space-y-4 mb-8">
               {plan.features.map((feature, fIndex) => (
-                <li key={fIndex} className="flex items-start gap-3 text-sm">
-                  <feature.icon className={`shrink-0 mt-0.5 ${feature.highlight ? 'text-zinc-400' : 'text-orange-500'}`} size={16} />
+                <li key={fIndex} className="flex items-start gap-3 text-base">
+                  <feature.icon className={`shrink-0 mt-0.5 ${feature.highlight ? 'text-zinc-400' : 'text-orange-500'}`} size={18} />
                   <span className={feature.highlight ? 'text-zinc-400' : ''}>{feature.text}</span>
                 </li>
               ))}
             </ul>
 
             <div className="mb-6 p-3 bg-zinc-800/50 border border-white/5">
-              <p className="text-xs text-zinc-400">{plan.target}</p>
+              <p className="text-sm text-zinc-400">{plan.target}</p>
             </div>
 
             <Button
@@ -112,7 +112,7 @@ export const PricingSection: React.FC = () => {
         ))}
       </div>
 
-      <div className="text-center mt-8 text-zinc-500 text-xs font-mono">
+      <div className="text-center mt-8 text-zinc-500 text-sm font-mono">
         ※ モニター価格でのご提供となります。予告なく終了する場合がございます。<br />
         ※ 詳細は下記の比較表をご覧ください。
       </div>

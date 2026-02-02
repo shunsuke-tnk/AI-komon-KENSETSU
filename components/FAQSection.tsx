@@ -44,7 +44,7 @@ export const FAQSection: React.FC = () => {
     <Section id="faq">
       <div className="text-center mb-16">
         <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-4">FAQ</h2>
-        <p className="text-zinc-500 font-mono uppercase text-sm">よくある質問</p>
+        <p className="text-zinc-500 font-mono uppercase text-base">よくある質問</p>
       </div>
 
       <div className="max-w-3xl mx-auto">
@@ -54,14 +54,14 @@ export const FAQSection: React.FC = () => {
               className="w-full py-6 flex items-center justify-between text-left group"
               onClick={() => toggleFAQ(index)}
             >
-              <span className="text-lg font-medium pr-8 group-hover:text-orange-500 transition-colors">
+              <span className="text-xl font-medium pr-8 group-hover:text-orange-500 transition-colors">
                 Q. {faq.question}
               </span>
               <ChevronDown
                 className={`shrink-0 text-zinc-500 transition-transform duration-300 ${
                   openIndex === index ? 'rotate-180 text-orange-500' : ''
                 }`}
-                size={20}
+                size={24}
               />
             </button>
             <div
@@ -70,7 +70,7 @@ export const FAQSection: React.FC = () => {
               }`}
             >
               <div className="pl-6 border-l-2 border-orange-500">
-                <p className="text-zinc-400 leading-relaxed">{faq.answer}</p>
+                <p className="text-zinc-400 leading-relaxed text-lg">{faq.answer}</p>
               </div>
             </div>
           </div>
