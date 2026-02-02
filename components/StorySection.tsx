@@ -18,76 +18,49 @@ export const StorySection: React.FC = () => {
                 </h2>
             </div>
 
-            {/* Main Story Content */}
-            <div className="grid grid-cols-1 lg:grid-cols-2">
-                {/* Left: The Story */}
-                <div className="p-10 md:p-16 border-r border-white/10 bg-black text-white">
-                    <h3 className="text-2xl font-bold mb-10 text-orange-500">私がこのサービスを作った理由</h3>
+            {/* Main Story Content - 背景画像付きフルワイド */}
+            <div
+                className="relative bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: 'url(/images/story-bg.jpg)' }}
+            >
+                {/* 暗いオーバーレイ */}
+                <div className="absolute inset-0 bg-black/70" />
 
-                    <div className="space-y-8 text-zinc-300 leading-relaxed text-lg">
+                {/* コンテンツ */}
+                <div className="relative z-10 px-6 md:px-20 py-20 md:py-32 max-w-4xl">
+                    {/* タイトル */}
+                    <h3 className="text-3xl md:text-5xl font-bold text-white mb-12 leading-tight">
+                        残業だらけの営業時代。
+                    </h3>
+
+                    <div className="space-y-8 text-white/90 leading-relaxed text-lg md:text-xl">
                         <p>
-                            リフォーム営業として入社した頃、毎日0時を超える残業が当たり前でした。
+                            冒頭、トップセールスなどと大それたことを言いましたが、<br />
+                            決してかっこいいものではなく、泥臭い道のりでした。
                         </p>
 
-                        <div className="border-l-2 border-zinc-700 pl-6 text-zinc-400 text-lg">
-                            <p>見積もり作成に2時間以上。</p>
-                            <p>原価表すらなく、FAXを指で照らし合わせて原価を調べる。</p>
-                            <p>日中は現場、帰社してから事務作業。</p>
-                            <p>どれだけ頑張っても、12時を切ることがない。</p>
+                        <div className="space-y-2 text-white/80">
+                            <p>あらゆることがアナログ。手書きでメモし、大量にコピーし、手入力を繰り返す・・・</p>
+                            <p>毎日0時を超えるのが当たり前でした。</p>
+                            <p>見積もり作成に2時間以上。原価表すらなく、FAXを照らし合わせて原価を調べる。</p>
+                            <p>朝から晩まで現場に出て、帰社してから事務作業。</p>
+                            <p>どれだけ頑張っても0時より早く帰れない。</p>
                         </div>
 
-                        <p className="text-white font-medium text-lg">
-                            ある時、気づきました。
+                        <p className="text-xl md:text-2xl py-4">
+                            「このままじゃ一生残業地獄から抜け出せない。」
                         </p>
 
-                        <div className="bg-zinc-900/50 border border-white/10 p-6">
-                            <p className="text-white font-bold text-lg">
-                                こんな環境で、新しい社員が定着するわけがない。
-                            </p>
-                            <p className="text-zinc-400 mt-2 text-base">
-                                ということは、いつまで経ってもこの残業地獄から抜け出せない。
-                            </p>
+                        <div className="space-y-2 text-white/80">
+                            <p>そう気づいた日から、来る日も来る日も効率化に取り掛かりました。</p>
+                            <p>提案資料は、選ぶだけで自動で完成するようにしました。</p>
+                            <p>原価表は、全て仕様書も含めて見積書と連動するように改善。</p>
+                            <p>見積もりシステムを自作し、数量を入れるだけで6種類の見積書が完成し、契約処理まで行えるものになりました。</p>
                         </div>
 
-                        <p className="text-orange-500 font-bold text-xl">
-                            だから私は、効率化を始めました。
-                        </p>
-                    </div>
-                </div>
-
-                {/* Right: What I Did */}
-                <div className="p-10 md:p-16 bg-zinc-950 text-white">
-                    <h3 className="text-2xl font-bold mb-10 text-zinc-400">取り組んだこと</h3>
-
-                    <div className="space-y-6 text-zinc-300">
-                        <div className="border-l-2 border-orange-500 pl-6">
-                            <p className="font-medium text-white mb-2 text-lg">提案資料のテンプレートを作り直しました。</p>
-                            <p className="text-zinc-500 text-base">誰でも高品質な提案ができる仕組みに</p>
-                        </div>
-
-                        <div className="border-l-2 border-orange-500 pl-6">
-                            <p className="font-medium text-white mb-2 text-lg">原価表を自分で更新しました。</p>
-                            <p className="text-zinc-500 text-base">FAXを探す時間をゼロに</p>
-                        </div>
-
-                        <div className="border-l-2 border-orange-500 pl-6">
-                            <p className="font-medium text-white mb-2 text-lg">見積もりシステムを自作しました。</p>
-                            <p className="text-zinc-500 text-base">入力の回数を減らす工夫を何十回も重ねた</p>
-                        </div>
-
-                        <div className="border-l-2 border-orange-500 pl-6">
-                            <p className="font-medium text-white mb-2 text-lg">社内の報告書式を片っ端から直しました。</p>
-                            <p className="text-zinc-500 text-base">少なくとも20ファイル以上をデジタル化</p>
-                        </div>
-
-                        <div className="mt-10 p-6 bg-black border border-white/10">
-                            <p className="text-zinc-400 mb-4 text-base">
-                                <span className="text-white font-bold">身の回りのすべてを、端から端まで効率化しました。</span>
-                            </p>
-                            <p className="text-zinc-400 text-base">
-                                そして、ただ効率化するだけではなく、<br />
-                                <span className="text-orange-500 font-bold">「誰がやっても同じ品質で、効率よくできる仕組み」</span>を作ることを目指しました。
-                            </p>
+                        <div className="space-y-2 text-white/80 pt-4">
+                            <p>誰が使っても使いやすいものにするために、完成後も何十回も修正を繰り返しました。</p>
+                            <p className="text-white font-medium">その結果、見積もり作成にかかる時間は15分まで短縮しました。</p>
                         </div>
                     </div>
                 </div>
