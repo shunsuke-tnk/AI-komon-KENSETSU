@@ -18,22 +18,25 @@ export const StorySection: React.FC = () => {
                 </h2>
             </div>
 
-            {/* Main Story Content - 背景画像付きフルワイド */}
-            <div
-                className="relative bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: 'url(/images/story-bg.jpg)' }}
-            >
-                {/* 暗いオーバーレイ */}
-                <div className="absolute inset-0 bg-black/70" />
+            {/* Main Story Content */}
+            <div className="relative bg-black">
+                {/* タイトル */}
+                <h3 className="text-3xl md:text-5xl font-bold text-white mb-12 leading-tight py-12">
+                    残業だらけの営業時代。
+                </h3>
 
-                {/* コンテンツ */}
-                <div className="relative z-10 px-6 md:px-20 py-20 md:py-32 max-w-4xl">
-                    {/* タイトル */}
-                    <h3 className="text-3xl md:text-5xl font-bold text-white mb-12 leading-tight">
-                        残業だらけの営業時代。
-                    </h3>
+                {/* 残業時代の部分 - 画像とテキストが中央で重なる構成 */}
+                <div className="relative py-12 min-h-[500px] lg:min-h-[600px]">
+                    {/* 背景画像 - 右側から中央へ（2段組の右カラム位置に相当） */}
+                    <div
+                        className="absolute top-0 bottom-0 right-0 w-full lg:w-[65%] bg-cover bg-right bg-no-repeat"
+                        style={{ backgroundImage: 'url(/残業２.png)' }}
+                    />
+                    {/* 左から右へのグラデーションオーバーレイ（中央で重なる部分を滑らかに） */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-black via-black/95 via-40% to-transparent" />
 
-                    <div className="space-y-8 text-white/90 leading-relaxed text-lg md:text-xl">
+                    {/* テキストコンテンツ - 左側から中央へ（2段組の左カラム位置に相当） */}
+                    <div className="relative z-10 lg:w-[60%] space-y-8 text-white/90 leading-relaxed text-lg md:text-xl">
                         <p>
                             冒頭、トップセールスなどと大それたことを言いましたが、<br />
                             決してかっこいいものではなく、泥臭い道のりでした。
@@ -62,7 +65,12 @@ export const StorySection: React.FC = () => {
                             <p>誰が使っても使いやすいものにするために、完成後も何十回も修正を繰り返しました。</p>
                             <p className="text-white font-medium">その結果、見積もり作成にかかる時間は15分まで短縮しました。</p>
                         </div>
+                    </div>
+                </div>
 
+                {/* 続きのコンテンツ */}
+                <div className="py-12">
+                    <div className="space-y-8 text-white/90 leading-relaxed text-lg md:text-xl">
                         <div className="space-y-4 pt-6 border-t border-white/20">
                             <p className="text-xl md:text-2xl text-white">それだけではありません。</p>
 
