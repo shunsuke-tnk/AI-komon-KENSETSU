@@ -15,10 +15,10 @@ export const Button: React.FC<ButtonProps> = ({
   className = '',
   ...props 
 }) => {
-  const baseStyles = "inline-flex items-center justify-center font-bold tracking-wider transition-all duration-300 focus:outline-none uppercase";
-  
+  const baseStyles = "relative inline-flex items-center justify-center font-bold tracking-wider transition-all duration-300 focus:outline-none uppercase overflow-hidden";
+
   const variants = {
-    primary: "bg-gradient-to-r from-orange-600 via-amber-500 to-amber-600 text-white border-2 border-orange-400 hover:from-orange-700 hover:via-amber-600 hover:to-amber-700 shadow-lg shadow-orange-500/30 [text-shadow:_0_1px_2px_rgb(0_0_0_/_40%)]",
+    primary: "bg-gradient-to-r from-orange-600 via-amber-500 to-amber-600 text-white border-2 border-orange-400 hover:from-orange-700 hover:via-amber-600 hover:to-amber-700 shadow-lg shadow-orange-500/30 [text-shadow:_0_1px_2px_rgb(0_0_0_/_40%)] before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/40 before:to-transparent before:-translate-x-full hover:before:translate-x-full before:transition-transform before:duration-700 before:ease-in-out",
     secondary: "bg-zinc-900 text-white border border-zinc-800 hover:border-orange-500 hover:text-orange-500",
     outline: "bg-transparent border border-white/30 text-white hover:border-white hover:bg-white/5"
   };

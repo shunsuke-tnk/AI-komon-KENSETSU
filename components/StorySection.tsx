@@ -1,6 +1,7 @@
 import React from 'react';
 import { Section } from './ui/Section';
 import { TrendingUp, Clock, Users, Award, Building } from 'lucide-react';
+import { Button } from './ui/Button';
 
 export const StorySection: React.FC = () => {
     return (
@@ -185,8 +186,15 @@ export const StorySection: React.FC = () => {
                         現場の痛みを、身をもって知っています。
                     </p>
                     <p className="text-3xl md:text-4xl font-bold text-white whitespace-nowrap">
-                        だから、<span className="text-orange-500">建設業に特化したサービス</span>を作りました。
+                        だから、<span className="font-extrabold bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent">建設業に特化したサービス</span>を作りました。
                     </p>
+
+                    {/* 中間コンバージョンボタン */}
+                    <div className="mt-12">
+                        <Button variant="primary" size="xl" icon className="text-xl">
+                            無料相談を予約する
+                        </Button>
+                    </div>
                 </div>
             </div>
         </Section>
