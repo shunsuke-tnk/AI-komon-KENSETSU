@@ -35,8 +35,8 @@ export const FlowSection: React.FC = () => {
                 無料AI活用診断
               </h3>
               <p className="text-zinc-300 text-base md:text-lg leading-relaxed mb-4">
-                Zoomで30分、御社の業務をヒアリング。<br className="hidden md:block" />
-                「AIで何が改善できて、何ができないか」を具体的にお伝えします。
+                改善の第一歩は<span className="text-amber-300 font-bold">現状を把握すること</span>。<br />
+                一緒に業務を棚卸しし、「何が改善できて、何ができないか」を明確にします。
               </p>
               <div className="flex flex-wrap gap-3">
                 <span className="px-4 py-2 bg-amber-500/20 border border-amber-500/40 text-amber-300 text-sm font-bold">
@@ -44,9 +44,6 @@ export const FlowSection: React.FC = () => {
                 </span>
                 <span className="px-4 py-2 bg-amber-500/20 border border-amber-500/40 text-amber-300 text-sm font-bold">
                   Zoom 30分
-                </span>
-                <span className="px-4 py-2 bg-amber-500/20 border border-amber-500/40 text-amber-300 text-sm font-bold">
-                  押し売り一切なし
                 </span>
               </div>
             </div>
