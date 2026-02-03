@@ -62,6 +62,38 @@ export const StorySection: React.FC = () => {
                             <p>誰が使っても使いやすいものにするために、完成後も何十回も修正を繰り返しました。</p>
                             <p className="text-white font-medium">その結果、見積もり作成にかかる時間は15分まで短縮しました。</p>
                         </div>
+
+                        <div className="space-y-4 pt-6 border-t border-white/20">
+                            <p className="text-xl md:text-2xl text-white">それだけではありません。</p>
+
+                            <div className="space-y-2 text-white/80">
+                                <p>経理書類や売上データ、集客データや報告書式など、</p>
+                                <p>目につくものを片っ端から直していきました。</p>
+                                <p>少なくとも50ファイル以上。</p>
+                                <p>Excelの表も、紙ベースのものも、すべてデジタル化。</p>
+                            </div>
+
+                            <p className="text-white font-bold text-lg pt-2">
+                                身の回りのすべてを、端から端まで効率化しました。
+                            </p>
+
+                            <div className="space-y-2 text-white/80">
+                                <p>そして、ただ効率化するだけではなく、</p>
+                                <p className="text-orange-500 font-bold">「誰がやっても同じ品質で、効率よくできる仕組み」</p>
+                                <p>を作ることを目指しました。</p>
+                            </div>
+
+                            <div className="space-y-2 text-white/90 pt-4">
+                                <p>これにより、5年連続で個人年間売上2億円を維持しながら、</p>
+                                <p>マーケティング業務全てを担い、</p>
+                                <p className="text-white font-bold">創業40年の会社で過去最高集客数・過去最高売上を達成。</p>
+                            </div>
+
+                            <p className="text-xl md:text-2xl text-white font-medium pt-4">
+                                業務量は圧倒的に増えたにも関わらず、<br />
+                                定時で帰ることができるようになりました。
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
