@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from './ui/Button';
 import { ArrowDownRight } from 'lucide-react';
 
@@ -54,9 +55,11 @@ export const Hero: React.FC = () => {
                     </div>
 
                     <div className="flex flex-col sm:flex-row gap-6">
-                        <Button size="xl" icon className="text-2xl">
-                            無料AI活用診断に申し込む
-                        </Button>
+                        <Link to="/contact">
+                            <Button size="xl" icon className="text-2xl">
+                                無料AI活用診断に申し込む
+                            </Button>
+                        </Link>
                         <div className="flex items-center gap-2 text-zinc-500 text-base">
                             <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
                             毎月3社限定・Zoom 30分

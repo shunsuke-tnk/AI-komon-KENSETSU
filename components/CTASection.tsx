@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Video, MessageSquare, CheckCircle, XCircle, ArrowRight } from 'lucide-react';
 
 export const CTASection: React.FC = () => {
@@ -57,14 +58,14 @@ export const CTASection: React.FC = () => {
 
         {/* CTA Button */}
         <div className="text-center">
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="group relative inline-flex items-center justify-center font-black tracking-wider transition-all duration-300 px-16 py-8 text-2xl bg-gradient-to-b from-orange-500 via-orange-600 to-orange-700 text-white rounded-lg shadow-[0_10px_40px_rgba(234,88,12,0.5)] hover:shadow-[0_15px_50px_rgba(234,88,12,0.7)] hover:-translate-y-1 border-t-2 border-orange-400 overflow-hidden animate-heartbeat"
           >
             <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
             <span className="relative">無料AI活用診断に申し込む</span>
             <ArrowRight className="relative ml-4 w-7 h-7 group-hover:translate-x-1 transition-transform" />
-          </a>
+          </Link>
           <p className="mt-6 text-base font-bold opacity-70">
             ※ 毎月3社限定 / Zoom 30分
           </p>

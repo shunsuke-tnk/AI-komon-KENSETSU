@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Section } from './ui/Section';
 import { Button } from './ui/Button';
 import { MessageSquare, Users, Code, Video, FileText, Wrench, ArrowRight } from 'lucide-react';
@@ -111,13 +112,15 @@ export const PricingSection: React.FC = () => {
             </div>
 
             {/* CTA */}
-            <Button
-              variant="primary"
-              className="w-full text-xl py-5 group-hover:bg-orange-400 transition-colors"
-            >
-              無料でまずは相談する
-              <ArrowRight className="ml-2 inline-block" size={20} />
-            </Button>
+            <Link to="/contact">
+              <Button
+                variant="primary"
+                className="w-full text-xl py-5 group-hover:bg-orange-400 transition-colors"
+              >
+                無料でまずは相談する
+                <ArrowRight className="ml-2 inline-block" size={20} />
+              </Button>
+            </Link>
           </div>
         ))}
       </div>

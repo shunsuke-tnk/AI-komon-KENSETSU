@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Section } from './ui/Section';
 import { TrendingUp, Clock, Users, Award, Building } from 'lucide-react';
 import { Button } from './ui/Button';
@@ -191,9 +192,11 @@ export const StorySection: React.FC = () => {
 
                     {/* 中間コンバージョンボタン */}
                     <div className="mt-12">
-                        <Button variant="primary" size="xl" icon className="text-xl">
-                            無料相談を予約する
-                        </Button>
+                        <Link to="/contact">
+                            <Button variant="primary" size="xl" icon className="text-xl">
+                                無料相談を予約する
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </div>

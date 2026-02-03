@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Hero } from './components/Hero';
 import { ProblemSection } from './components/ProblemSection';
 import { WhyFailSection } from './components/WhyFailSection';
@@ -11,8 +12,9 @@ import { FAQSection } from './components/FAQSection';
 import { CredentialsSection } from './components/CredentialsSection';
 import { CTASection } from './components/CTASection';
 import { Footer } from './components/Footer';
+import { ContactPage } from './pages/ContactPage';
 
-const App: React.FC = () => {
+const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-900 text-slate-50 antialiased selection:bg-orange-500 selection:text-white">
       <main>
@@ -51,6 +53,17 @@ const App: React.FC = () => {
       </main>
       <Footer />
     </div>
+  );
+};
+
+const App: React.FC = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
