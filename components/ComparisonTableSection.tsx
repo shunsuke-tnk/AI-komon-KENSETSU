@@ -209,6 +209,13 @@ export const ComparisonTableSection: React.FC = () => {
           <span className="text-zinc-400 text-base">非対応</span>
         </div>
       </div>
+
+      {/* Contract Terms */}
+      <div className="mt-12 max-w-3xl mx-auto text-center">
+        <p className="text-zinc-400 text-base leading-relaxed">
+          全プラン共通で、最低契約期間は<span className="text-zinc-200 font-medium">3ヶ月</span>となります。ただし、最初の1ヶ月は<span className="text-zinc-200 font-medium">「試用期間」</span>です。もし、この期間に「合わない」と感じた場合は、その時点でご判断可能です。
+        </p>
+      </div>
     </Section>
   );
 };

@@ -122,6 +122,12 @@ export const FlowSection: React.FC = () => {
           </div>
         </div>
 
+        {/* Contract Terms Note */}
+        <div className="mt-8 pt-6 border-t border-zinc-800 flex justify-center gap-8 text-sm text-zinc-500">
+          <span>最低契約期間：<span className="text-zinc-300">3ヶ月</span></span>
+          <span>試用期間：<span className="text-zinc-300">最初の1ヶ月</span></span>
+        </div>
+
       </div>
     </Section>
   );

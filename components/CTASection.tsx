@@ -1,11 +1,10 @@
 import React from 'react';
-import { Button } from './ui/Button';
-import { Video, MessageSquare, CheckCircle, XCircle } from 'lucide-react';
+import { Video, MessageSquare, CheckCircle, XCircle, ArrowRight } from 'lucide-react';
 
 export const CTASection: React.FC = () => {
   return (
-    <div className="bg-orange-600 text-black py-24 md:py-32 px-6 overflow-hidden relative">
-      <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+    <div className="bg-gradient-to-br from-amber-100 via-yellow-200 to-amber-300 text-black py-24 md:py-32 px-6 overflow-hidden relative">
+      <div className="absolute top-0 left-0 w-full h-full opacity-5 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
 
       <div className="max-w-[1200px] mx-auto relative z-10">
         {/* Main Content */}
@@ -58,14 +57,13 @@ export const CTASection: React.FC = () => {
 
         {/* CTA Button */}
         <div className="text-center">
-          <Button
-            variant="primary"
-            size="xl"
-            className="bg-black text-white hover:bg-white hover:text-black border-black hover:border-black"
-            icon
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center font-bold tracking-wider transition-all duration-300 uppercase px-12 py-6 text-lg bg-black text-white hover:bg-white hover:text-black border-2 border-black"
           >
             無料AI活用診断に申し込む
-          </Button>
+            <ArrowRight className="ml-4 w-5 h-5" />
+          </a>
           <p className="mt-4 text-base font-bold opacity-70">
             ※ 毎月3社限定 / Zoom 30分
           </p>
