@@ -2,25 +2,25 @@ import React from 'react';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-black py-12 px-6 border-t border-white/10">
-      <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-end gap-8">
-        <div>
-            <h4 className="font-black text-2xl tracking-tighter mb-2">CONSTRUCTION<br/>AI ADVISOR</h4>
-            <p className="text-zinc-500 text-xs font-mono">
-                AI CONSULTING SERVICE FOR CONSTRUCTION INDUSTRY.<br/>
-                OPTIMIZE YOUR WORKFLOW.
-            </p>
+    <footer className="bg-black py-8 px-6 border-t border-white/10">
+      <div className="max-w-[1400px] mx-auto space-y-4">
+        {/* 1行目: 企業情報 */}
+        <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-6 text-sm text-zinc-400">
+          <span className="text-white font-bold">株式会社ノヴァリス</span>
+          <span>〒152-0004 東京都目黒区鷹番2丁目20番20号 イニッゾ学芸大学5-17</span>
+          <a href="https://novalisgroup.jp/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+            novalisgroup.jp
+          </a>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-8 items-end md:items-center">
-             <div className="flex gap-6 text-sm font-bold text-zinc-400">
-                <a href="#" className="hover:text-white transition-colors">利用規約</a>
-                <a href="#" className="hover:text-white transition-colors">プライバシーポリシー</a>
-                <a href="#" className="hover:text-white transition-colors">特定商取引法</a>
-             </div>
-             <div className="text-zinc-600 text-xs font-mono">
-                © 2024 CONSTRUCTION AI ADVISOR.
-             </div>
+        {/* 2行目: リンクとコピーライト */}
+        <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-6 text-xs text-zinc-500">
+          <div className="flex gap-4">
+            <a href="#" className="hover:text-white transition-colors">利用規約</a>
+            <a href="#" className="hover:text-white transition-colors">プライバシーポリシー</a>
+            <a href="#" className="hover:text-white transition-colors">特定商取引法</a>
+          </div>
+          <span>© 2026 株式会社ノヴァリス</span>
         </div>
       </div>
     </footer>
