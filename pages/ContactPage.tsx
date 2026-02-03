@@ -9,6 +9,9 @@ const EMAILJS_SERVICE_ID = 'service_ge0upmi';
 const EMAILJS_TEMPLATE_ID = 'template_ai0rsz2';
 const EMAILJS_PUBLIC_KEY = 'vx50aV6eOQr3aUKIJ';
 
+// Google Sheets Web App URL
+const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbw1zMNsitPgh5WA-RH0QZZSNcXEmU8ncJdx6LrTolBRhnP5SWx84zglP4ighssGWAXXuA/exec';
+
 export const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     companyName: '',
@@ -31,7 +34,24 @@ export const ContactPage: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      // お客様への自動返信メール送信
+      // 1. Google スプレッドシートにデータを送信
+      await fetch(GOOGLE_SHEETS_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          companyName: formData.companyName,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || '',
+          plan: formData.plan || '未選択',
+          message: formData.message || '',
+        }),
+      });
+
+      // 2. お客様への自動返信メール送信
       const templateParams = {
         to_email: formData.email,
         to_name: formData.name,
@@ -51,7 +71,7 @@ export const ContactPage: React.FC = () => {
 
       setIsSubmitted(true);
     } catch (error) {
-      console.error('メール送信エラー:', error);
+      console.error('送信エラー:', error);
       // エラーでも送信完了として扱う（後で手動対応）
       setIsSubmitted(true);
     } finally {
