@@ -97,10 +97,10 @@ export const ConceptSection: React.FC = () => {
         <div className="text-center">
           <p className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight tracking-tight">
             「この人に聞けば、<br />
-            <span className="text-orange-500">AI周りはなんとかなる」</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600">AI周りはなんとかなる」</span>
           </p>
           <p className="text-3xl md:text-4xl lg:text-5xl text-zinc-400 font-bold mt-8 md:mt-12">
-            そんな安心感を、<span className="text-orange-500">月10万円</span>で。
+            そんな安心感を、<span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600">月10万円</span>で。
           </p>
         </div>
       </div>
