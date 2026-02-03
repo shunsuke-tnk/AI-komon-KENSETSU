@@ -59,10 +59,10 @@ export const CTASection: React.FC = () => {
         <div className="text-center">
           <a
             href="#contact"
-            className="inline-flex items-center justify-center font-bold tracking-wider transition-all duration-300 uppercase px-12 py-6 text-lg bg-black text-white hover:bg-white hover:text-black border-2 border-black"
+            className="inline-flex items-center justify-center font-bold tracking-wider transition-all duration-300 uppercase px-14 py-7 text-xl bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-600 text-white hover:from-amber-700 hover:via-yellow-600 hover:to-amber-700 border-2 border-amber-700 shadow-lg shadow-amber-500/30 hover:shadow-xl hover:shadow-amber-500/40 hover:scale-105"
           >
             無料AI活用診断に申し込む
-            <ArrowRight className="ml-4 w-5 h-5" />
+            <ArrowRight className="ml-4 w-6 h-6" />
           </a>
           <p className="mt-4 text-base font-bold opacity-70">
             ※ 毎月3社限定 / Zoom 30分
