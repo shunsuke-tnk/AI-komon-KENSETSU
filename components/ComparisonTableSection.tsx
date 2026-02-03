@@ -3,115 +3,210 @@ import { Section } from './ui/Section';
 import { Check, Minus, Circle } from 'lucide-react';
 
 const comparisonItems = [
-  { label: '月額', bansou: '15万円（モニター10万円）', jisou: '40万円（モニター30万円）', agent: '60万円（モニター50万円）' },
-  { label: 'チャット相談', bansou: 'full', jisou: 'full', agent: 'partial', note: '開発関連' },
-  { label: 'キックオフMTG', bansou: 'full', jisou: 'full', agent: 'full' },
-  { label: '振り返りMTG（3ヶ月後）', bansou: 'full', jisou: 'full', agent: 'full' },
-  { label: '月1開発MTG', bansou: 'none', jisou: 'none', agent: 'full' },
-  { label: '月次レポート', bansou: 'full', jisou: 'full', agent: 'partial' },
-  { label: '社員研修（4名まで）', bansou: 'none', jisou: 'full', agent: 'none' },
-  { label: '内製化支援', bansou: 'none', jisou: 'full', agent: 'none' },
-  { label: 'オーダーメイド開発', bansou: 'none', jisou: 'none', agent: 'full' },
+  {
+    label: 'チャット相談',
+    desc: 'Slackでいつでも質問',
+    bansou: 'full',
+    jisou: 'full',
+    agent: 'partial',
+    agentNote: '開発関連のみ'
+  },
+  {
+    label: 'キックオフMTG',
+    desc: '現状把握と目標設定',
+    bansou: 'full',
+    jisou: 'full',
+    agent: 'full'
+  },
+  {
+    label: '振り返りMTG',
+    desc: '3ヶ月後の成果確認',
+    bansou: 'full',
+    jisou: 'full',
+    agent: 'full'
+  },
+  {
+    label: '社員研修',
+    desc: '4名までのAI活用研修',
+    bansou: 'none',
+    jisou: 'full',
+    agent: 'none'
+  },
+  {
+    label: '内製化支援',
+    desc: '自社でAI活用を進める体制づくり',
+    bansou: 'none',
+    jisou: 'full',
+    agent: 'none'
+  },
+  {
+    label: '月1開発MTG',
+    desc: '進捗確認とフィードバック',
+    bansou: 'none',
+    jisou: 'none',
+    agent: 'full'
+  },
+  {
+    label: 'オーダーメイド開発',
+    desc: '御社専用AIツールを構築',
+    bansou: 'none',
+    jisou: 'none',
+    agent: 'full'
+  },
 ];
 
 const renderCell = (value: string, note?: string) => {
   if (value === 'full') {
-    return <Check className="text-orange-500 mx-auto" size={24} />;
+    return (
+      <div className="flex justify-center">
+        <div className="w-10 h-10 rounded-full bg-orange-500/20 flex items-center justify-center">
+          <Check className="text-orange-500" size={24} strokeWidth={3} />
+        </div>
+      </div>
+    );
   }
   if (value === 'partial') {
     return (
-      <div className="flex flex-col items-center">
-        <Circle className="text-orange-500/60 mx-auto" size={20} />
-        {note && <span className="text-sm text-zinc-500 mt-1">{note}</span>}
+      <div className="flex flex-col items-center gap-1">
+        <div className="w-10 h-10 rounded-full bg-orange-500/10 flex items-center justify-center">
+          <Circle className="text-orange-400" size={20} strokeWidth={3} />
+        </div>
+        {note && <span className="text-sm text-zinc-500">{note}</span>}
       </div>
     );
   }
   if (value === 'none') {
-    return <Minus className="text-zinc-600 mx-auto" size={24} />;
+    return (
+      <div className="flex justify-center">
+        <div className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center">
+          <Minus className="text-zinc-600" size={24} strokeWidth={3} />
+        </div>
+      </div>
+    );
   }
-  return <span className="text-base font-medium">{value}</span>;
+  return <span className="text-lg font-bold">{value}</span>;
 };
 
 export const ComparisonTableSection: React.FC = () => {
   return (
     <Section id="comparison">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-4">COMPARISON</h2>
-        <p className="text-zinc-500 font-mono uppercase text-base">プラン比較表</p>
+      {/* Header */}
+      <div className="text-center mb-16 md:mb-20">
+        <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-4">COMPARISON</h2>
+        <p className="text-xl md:text-2xl text-zinc-400">各プランの詳細比較</p>
       </div>
 
-      <div className="max-w-5xl mx-auto overflow-x-auto">
-        <table className="w-full border-collapse">
-          {/* Header */}
-          <thead>
-            <tr>
-              <th className="p-4 text-left bg-zinc-900 border border-white/10 w-1/4">
-                <span className="text-zinc-400 text-base font-mono">項目</span>
-              </th>
-              <th className="p-4 text-center bg-zinc-900 border border-white/10">
-                <span className="text-white font-bold text-base">伴走プラン</span>
-              </th>
-              <th className="p-4 text-center bg-orange-500/20 border-2 border-orange-500">
-                <span className="text-orange-500 font-bold text-base">自走プラン</span>
-                <span className="block text-sm text-orange-400 mt-1">おすすめ</span>
-              </th>
-              <th className="p-4 text-center bg-zinc-900 border border-white/10">
-                <span className="text-white font-bold text-base">エージェント開発</span>
-              </th>
-            </tr>
-          </thead>
+      <div className="max-w-6xl mx-auto">
+        {/* Plan Headers - Card Style */}
+        <div className="grid grid-cols-4 gap-2 md:gap-4 mb-2 md:mb-4">
+          <div className="p-4 md:p-6"></div>
 
-          {/* Body */}
-          <tbody>
-            {comparisonItems.map((item, index) => (
-              <tr key={index} className="hover:bg-white/5 transition-colors">
-                <td className="p-4 bg-zinc-900/50 border border-white/10">
-                  <span className="text-zinc-300 text-base">{item.label}</span>
-                </td>
-                <td className="p-4 text-center border border-white/10">
-                  {renderCell(item.bansou)}
-                </td>
-                <td className="p-4 text-center border-x-2 border-orange-500/50 bg-orange-500/5">
-                  {renderCell(item.jisou)}
-                </td>
-                <td className="p-4 text-center border border-white/10">
-                  {renderCell(item.agent, item.note)}
-                </td>
-              </tr>
-            ))}
+          {/* 伴走プラン */}
+          <div className="p-4 md:p-8 bg-zinc-800 border border-zinc-700 text-center">
+            <h3 className="text-xl md:text-2xl font-black text-white mb-2">伴走プラン</h3>
+            <div className="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600">
+              ¥10<span className="text-lg md:text-xl">万円</span>
+            </div>
+            <p className="text-sm text-zinc-500 mt-1">/ 月</p>
+          </div>
 
-            {/* Recommendation Row */}
-            <tr className="bg-zinc-800/50">
-              <td className="p-4 border border-white/10">
-                <span className="text-orange-500 text-base font-bold">おすすめ</span>
-              </td>
-              <td className="p-4 text-center border border-white/10">
-                <span className="text-zinc-400 text-sm">AI活用を<br />始めたい方</span>
-              </td>
-              <td className="p-4 text-center border-x-2 border-orange-500/50 bg-orange-500/10">
-                <span className="text-white text-sm font-medium">社内にAIチームを<br />作りたい方</span>
-              </td>
-              <td className="p-4 text-center border border-white/10">
-                <span className="text-zinc-400 text-sm">具体的なツールが<br />欲しい方</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+          {/* 自走プラン */}
+          <div className="p-4 md:p-8 bg-zinc-800 border border-zinc-700 text-center">
+            <h3 className="text-xl md:text-2xl font-black text-white mb-2">自走プラン</h3>
+            <div className="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600">
+              ¥30<span className="text-lg md:text-xl">万円</span>
+            </div>
+            <p className="text-sm text-zinc-500 mt-1">/ 月</p>
+          </div>
+
+          {/* エージェント開発 */}
+          <div className="p-4 md:p-8 bg-zinc-800 border border-zinc-700 text-center">
+            <h3 className="text-xl md:text-2xl font-black text-white mb-2">エージェント開発</h3>
+            <div className="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600">
+              ¥50<span className="text-lg md:text-xl">万円</span>
+            </div>
+            <p className="text-sm text-zinc-500 mt-1">/ 月</p>
+          </div>
+        </div>
+
+        {/* Comparison Rows */}
+        <div className="border border-zinc-700 bg-zinc-900/50">
+          {comparisonItems.map((item, index) => (
+            <div
+              key={index}
+              className={`grid grid-cols-4 gap-2 md:gap-4 ${
+                index !== comparisonItems.length - 1 ? 'border-b border-zinc-800' : ''
+              }`}
+            >
+              {/* Feature Label */}
+              <div className="p-4 md:p-6 flex flex-col justify-center">
+                <span className="text-white font-bold text-base md:text-lg">{item.label}</span>
+                <span className="text-zinc-500 text-sm mt-1 hidden md:block">{item.desc}</span>
+              </div>
+
+              {/* Bansou */}
+              <div className="p-4 md:p-6 flex items-center justify-center bg-zinc-900/30">
+                {renderCell(item.bansou)}
+              </div>
+
+              {/* Jisou */}
+              <div className="p-4 md:p-6 flex items-center justify-center bg-zinc-900/30">
+                {renderCell(item.jisou)}
+              </div>
+
+              {/* Agent */}
+              <div className="p-4 md:p-6 flex items-center justify-center bg-zinc-900/30">
+                {renderCell(item.agent, item.agentNote)}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Target Audience Row */}
+        <div className="grid grid-cols-4 gap-2 md:gap-4 mt-2 md:mt-4">
+          <div className="p-4 md:p-6 flex items-center">
+            <span className="text-orange-500 font-bold text-base md:text-lg">こんな方に</span>
+          </div>
+
+          <div className="p-4 md:p-6 bg-zinc-800/50 border border-zinc-700">
+            <p className="text-zinc-300 text-sm md:text-base text-center leading-relaxed">
+              まずはAI活用を<br className="hidden md:block" />始めたい方
+            </p>
+          </div>
+
+          <div className="p-4 md:p-6 bg-zinc-800/50 border border-zinc-700">
+            <p className="text-zinc-300 text-sm md:text-base text-center leading-relaxed">
+              社内にAI人材を<br className="hidden md:block" />育てたい方
+            </p>
+          </div>
+
+          <div className="p-4 md:p-6 bg-zinc-800/50 border border-zinc-700">
+            <p className="text-zinc-300 text-sm md:text-base text-center leading-relaxed">
+              専用ツールを<br className="hidden md:block" />作りたい方
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Legend */}
-      <div className="mt-8 flex justify-center gap-8 text-base text-zinc-500">
-        <div className="flex items-center gap-2">
-          <Check className="text-orange-500" size={20} />
-          <span>対応</span>
+      <div className="mt-12 flex justify-center gap-8 md:gap-12">
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 rounded-full bg-orange-500/20 flex items-center justify-center">
+            <Check className="text-orange-500" size={18} strokeWidth={3} />
+          </div>
+          <span className="text-zinc-400 text-base">対応</span>
         </div>
-        <div className="flex items-center gap-2">
-          <Circle className="text-orange-500/60" size={18} />
-          <span>一部対応</span>
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 rounded-full bg-orange-500/10 flex items-center justify-center">
+            <Circle className="text-orange-400" size={16} strokeWidth={3} />
+          </div>
+          <span className="text-zinc-400 text-base">一部対応</span>
         </div>
-        <div className="flex items-center gap-2">
-          <Minus className="text-zinc-600" size={20} />
-          <span>非対応</span>
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center">
+            <Minus className="text-zinc-600" size={18} strokeWidth={3} />
+          </div>
+          <span className="text-zinc-400 text-base">非対応</span>
         </div>
       </div>
     </Section>
