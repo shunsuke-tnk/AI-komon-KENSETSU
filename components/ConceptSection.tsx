@@ -43,50 +43,51 @@ const comparisonData = [
 export const ConceptSection: React.FC = () => {
   return (
     <Section id="concept">
-      <div className="text-center mb-16">
-        <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-4">CONCEPT</h2>
-        <p className="text-zinc-500 font-mono uppercase text-base">サービスのコンセプト</p>
-      </div>
-
-      <div className="max-w-4xl mx-auto mb-16">
-        <h3 className="text-2xl md:text-4xl font-bold text-center leading-tight mb-4">
+      {/* Large Title */}
+      <div className="text-center mb-16 md:mb-24">
+        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
           AI人材を「採用」するのではなく、<br />
           <span className="text-orange-500">「顧問」として迎える</span>
-        </h3>
+        </h2>
       </div>
 
-      {/* Comparison Table */}
-      <div className="max-w-5xl mx-auto">
-        {/* Header */}
-        <div className="grid grid-cols-3 gap-4 mb-2">
+      {/* High-Impact Comparison Table */}
+      <div className="max-w-6xl mx-auto">
+        {/* Header Row */}
+        <div className="grid grid-cols-[140px_1fr_1fr] md:grid-cols-[200px_1fr_1fr] gap-1 mb-1">
           <div></div>
-          <div className="text-center p-4 bg-zinc-800 border border-white/10">
-            <span className="text-zinc-400 font-bold text-base">AI人材を採用</span>
+          <div className="text-center py-6 md:py-8 bg-zinc-800 border border-zinc-700">
+            <span className="text-zinc-400 font-bold text-xl md:text-2xl">AI人材を採用</span>
           </div>
-          <div className="text-center p-4 bg-orange-500 text-black">
-            <span className="font-bold text-base">AI顧問</span>
+          <div className="text-center py-6 md:py-8 bg-orange-500">
+            <span className="text-black font-black text-xl md:text-2xl">AI顧問</span>
           </div>
         </div>
 
-        {/* Rows */}
+        {/* Data Rows */}
         {comparisonData.map((row, index) => (
-          <div key={index} className="grid grid-cols-3 gap-4 mb-2">
-            <div className="flex items-center p-4 bg-zinc-900/50 border border-white/10">
-              <span className="text-base font-bold text-zinc-300">{row.label}</span>
+          <div key={index} className="grid grid-cols-[140px_1fr_1fr] md:grid-cols-[200px_1fr_1fr] gap-1 mb-1">
+            {/* Label */}
+            <div className="flex items-center justify-start py-6 md:py-8 px-4 md:px-6 bg-zinc-900 border-l-4 border-l-zinc-600">
+              <span className="text-lg md:text-2xl font-bold text-white">{row.label}</span>
             </div>
-            <div className="p-4 bg-zinc-900/30 border border-white/10">
-              <div className="flex items-center gap-2 mb-1">
-                <X className="text-red-400 shrink-0" size={18} />
-                <span className="text-zinc-300 font-medium text-base">{row.hiring}</span>
+
+            {/* Hiring - Negative */}
+            <div className="py-6 md:py-8 px-4 md:px-8 bg-zinc-900/50 border border-zinc-800">
+              <div className="flex items-center gap-3 md:gap-4 mb-2">
+                <X className="text-zinc-600 shrink-0" size={28} strokeWidth={3} />
+                <span className="text-zinc-400 font-bold text-lg md:text-2xl">{row.hiring}</span>
               </div>
-              <p className="text-zinc-500 text-sm pl-6">{row.hiringNote}</p>
+              <p className="text-zinc-600 text-sm md:text-base pl-10 md:pl-12">{row.hiringNote}</p>
             </div>
-            <div className="p-4 bg-orange-500/10 border border-orange-500/30">
-              <div className="flex items-center gap-2 mb-1">
-                <Check className="text-orange-500 shrink-0" size={18} />
-                <span className="text-white font-medium text-base">{row.advisor}</span>
+
+            {/* Advisor - Positive */}
+            <div className="py-6 md:py-8 px-4 md:px-8 bg-orange-500/10 border-2 border-orange-500/40">
+              <div className="flex items-center gap-3 md:gap-4 mb-2">
+                <Check className="text-orange-500 shrink-0" size={28} strokeWidth={3} />
+                <span className="text-white font-bold text-lg md:text-2xl">{row.advisor}</span>
               </div>
-              <p className="text-zinc-400 text-sm pl-6">{row.advisorNote}</p>
+              <p className="text-zinc-400 text-sm md:text-base pl-10 md:pl-12">{row.advisorNote}</p>
             </div>
           </div>
         ))}
