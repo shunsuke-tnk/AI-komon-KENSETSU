@@ -54,7 +54,7 @@ export const Hero: React.FC = () => {
                     </div>
 
                     <div className="flex flex-col sm:flex-row gap-6">
-                        <Button size="lg" icon>
+                        <Button size="xl" icon className="text-2xl">
                             無料AI活用診断に申し込む
                         </Button>
                         <div className="flex items-center gap-2 text-zinc-500 text-base">

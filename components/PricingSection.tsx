@@ -113,9 +113,9 @@ export const PricingSection: React.FC = () => {
             {/* CTA */}
             <Button
               variant="primary"
-              className="w-full text-lg py-4 group-hover:bg-orange-400 transition-colors"
+              className="w-full text-xl py-5 group-hover:bg-orange-400 transition-colors"
             >
-              詳細を見る
+              無料でまずは相談する
               <ArrowRight className="ml-2 inline-block" size={20} />
             </Button>
           </div>
