@@ -1,6 +1,5 @@
 import React from 'react';
 import { Section } from './ui/Section';
-import { X, Check, Zap, Clock, GraduationCap, Shield } from 'lucide-react';
 
 const comparisonData = [
   {
@@ -52,83 +51,57 @@ export const ConceptSection: React.FC = () => {
       </div>
 
       {/* High-Impact Comparison Table */}
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         {/* Header Row */}
-        <div className="grid grid-cols-[140px_1fr_1fr] md:grid-cols-[200px_1fr_1fr] gap-1 mb-1">
-          <div></div>
-          <div className="text-center py-6 md:py-8 bg-zinc-800 border border-zinc-700">
-            <span className="text-zinc-400 font-bold text-xl md:text-2xl">AI人材を採用</span>
+        <div className="flex">
+          <div className="w-[160px] md:w-[220px] shrink-0"></div>
+          <div className="flex-1 text-center py-8 md:py-10 bg-zinc-800/80">
+            <span className="text-zinc-300 font-bold text-2xl md:text-3xl tracking-wide">AI人材を採用</span>
           </div>
-          <div className="text-center py-6 md:py-8 bg-orange-500">
-            <span className="text-black font-black text-xl md:text-2xl">AI顧問</span>
+          <div className="flex-1 text-center py-8 md:py-10 bg-orange-500">
+            <span className="text-black font-black text-2xl md:text-3xl tracking-wide">AI顧問</span>
           </div>
         </div>
 
         {/* Data Rows */}
         {comparisonData.map((row, index) => (
-          <div key={index} className="grid grid-cols-[140px_1fr_1fr] md:grid-cols-[200px_1fr_1fr] gap-1 mb-1">
+          <div key={index} className="flex border-t border-zinc-800">
             {/* Label */}
-            <div className="flex items-center justify-start py-6 md:py-8 px-4 md:px-6 bg-zinc-900 border-l-4 border-l-zinc-600">
-              <span className="text-lg md:text-2xl font-bold text-white">{row.label}</span>
+            <div className="w-[160px] md:w-[220px] shrink-0 flex items-center py-8 md:py-10 px-5 md:px-8 bg-zinc-900/80 border-r border-zinc-800">
+              <span className="text-xl md:text-2xl font-black text-white leading-tight">{row.label}</span>
             </div>
 
             {/* Hiring - Negative */}
-            <div className="py-6 md:py-8 px-4 md:px-8 bg-zinc-900/50 border border-zinc-800">
-              <div className="flex items-center gap-3 md:gap-4 mb-2">
-                <X className="text-zinc-600 shrink-0" size={28} strokeWidth={3} />
-                <span className="text-zinc-400 font-bold text-lg md:text-2xl">{row.hiring}</span>
+            <div className="flex-1 py-8 md:py-10 px-5 md:px-10 bg-zinc-900/40">
+              <div className="flex items-center gap-4 mb-3">
+                <span className="text-zinc-500 text-2xl md:text-3xl font-bold">✕</span>
+                <span className="text-zinc-300 font-black text-xl md:text-2xl leading-tight">{row.hiring}</span>
               </div>
-              <p className="text-zinc-600 text-sm md:text-base pl-10 md:pl-12">{row.hiringNote}</p>
+              <p className="text-zinc-500 text-base md:text-lg pl-10 md:pl-12">{row.hiringNote}</p>
             </div>
 
             {/* Advisor - Positive */}
-            <div className="py-6 md:py-8 px-4 md:px-8 bg-orange-500/10 border-2 border-orange-500/40">
-              <div className="flex items-center gap-3 md:gap-4 mb-2">
-                <Check className="text-orange-500 shrink-0" size={28} strokeWidth={3} />
-                <span className="text-white font-bold text-lg md:text-2xl">{row.advisor}</span>
+            <div className="flex-1 py-8 md:py-10 px-5 md:px-10 bg-orange-500/10 border-l-4 border-orange-500">
+              <div className="flex items-center gap-4 mb-3">
+                <span className="text-orange-500 text-2xl md:text-3xl font-bold">✓</span>
+                <span className="text-white font-black text-xl md:text-2xl leading-tight">{row.advisor}</span>
               </div>
-              <p className="text-zinc-400 text-sm md:text-base pl-10 md:pl-12">{row.advisorNote}</p>
+              <p className="text-zinc-400 text-base md:text-lg pl-10 md:pl-12">{row.advisorNote}</p>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Key Message */}
-      <div className="mt-20 max-w-3xl mx-auto">
-        <div className="border-2 border-orange-500 p-10 bg-orange-500/5 text-center relative">
-          <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-black px-6 py-1">
-            <span className="text-orange-500 font-bold text-base tracking-wider">KEY MESSAGE</span>
-          </div>
-          <p className="text-3xl md:text-4xl font-bold text-white leading-relaxed">
-            「この人に聞けば、<br className="md:hidden" />AI周りはなんとかなる」
+      {/* Key Message - Bold & Large */}
+      <div className="mt-24 md:mt-32 mb-8">
+        <div className="text-center">
+          <p className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight tracking-tight">
+            「この人に聞けば、<br />
+            <span className="text-orange-500">AI周りはなんとかなる」</span>
           </p>
-          <p className="text-2xl text-orange-500 font-bold mt-4">
-            そんな安心感を、月10万円で。
+          <p className="text-3xl md:text-4xl lg:text-5xl text-zinc-400 font-bold mt-8 md:mt-12">
+            そんな安心感を、<span className="text-orange-500">月10万円</span>で。
           </p>
-        </div>
-      </div>
-
-      {/* Benefits Icons */}
-      <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-        <div className="text-center p-6 border border-white/10 bg-zinc-900/30">
-          <Zap className="text-orange-500 mx-auto mb-3" size={32} />
-          <p className="text-base font-medium">即戦力</p>
-          <p className="text-sm text-zinc-500 mt-1">今すぐ活用開始</p>
-        </div>
-        <div className="text-center p-6 border border-white/10 bg-zinc-900/30">
-          <Clock className="text-orange-500 mx-auto mb-3" size={32} />
-          <p className="text-base font-medium">時間削減</p>
-          <p className="text-sm text-zinc-500 mt-1">採用活動不要</p>
-        </div>
-        <div className="text-center p-6 border border-white/10 bg-zinc-900/30">
-          <GraduationCap className="text-orange-500 mx-auto mb-3" size={32} />
-          <p className="text-base font-medium">教育支援</p>
-          <p className="text-sm text-zinc-500 mt-1">社員も成長</p>
-        </div>
-        <div className="text-center p-6 border border-white/10 bg-zinc-900/30">
-          <Shield className="text-orange-500 mx-auto mb-3" size={32} />
-          <p className="text-base font-medium">低リスク</p>
-          <p className="text-sm text-zinc-500 mt-1">試用期間あり</p>
         </div>
       </div>
     </Section>
