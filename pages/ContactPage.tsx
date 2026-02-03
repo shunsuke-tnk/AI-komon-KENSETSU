@@ -34,18 +34,18 @@ export const ContactPage: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-black text-white flex items-center justify-center px-6">
+      <div className="min-h-screen bg-white text-zinc-900 flex items-center justify-center px-6">
         <div className="max-w-lg text-center">
           <CheckCircle className="w-20 h-20 text-green-500 mx-auto mb-6" />
           <h1 className="text-3xl md:text-4xl font-bold mb-4">
             お申し込みありがとうございます
           </h1>
-          <p className="text-zinc-400 text-lg mb-8">
+          <p className="text-zinc-600 text-lg mb-8">
             内容を確認の上、2営業日以内にご連絡いたします。<br />
             しばらくお待ちください。
           </p>
           <Link to="/">
-            <Button variant="outline" size="lg">
+            <Button variant="primary" size="lg">
               <ArrowLeft className="mr-2" size={20} />
               トップページに戻る
             </Button>
@@ -56,11 +56,11 @@ export const ContactPage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-white text-zinc-900">
       {/* Header */}
-      <header className="border-b border-white/10 py-6 px-6">
+      <header className="border-b border-zinc-200 py-6 px-6">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors">
+          <Link to="/" className="flex items-center gap-2 text-zinc-600 hover:text-zinc-900 transition-colors">
             <ArrowLeft size={20} />
             <span>トップページに戻る</span>
           </Link>
@@ -76,7 +76,7 @@ export const ContactPage: React.FC = () => {
             <h1 className="text-4xl md:text-5xl font-black mb-4">
               無料相談に申し込む
             </h1>
-            <p className="text-zinc-400 text-lg">
+            <p className="text-zinc-600 text-lg">
               以下のフォームに必要事項をご記入ください。<br />
               2営業日以内にご連絡いたします。
             </p>
@@ -86,7 +86,7 @@ export const ContactPage: React.FC = () => {
           <form onSubmit={handleSubmit} className="space-y-8">
             {/* 会社名 */}
             <div>
-              <label htmlFor="companyName" className="block text-sm font-bold text-zinc-300 mb-2">
+              <label htmlFor="companyName" className="block text-lg font-bold text-zinc-700 mb-2">
                 会社名 <span className="text-orange-500">*</span>
               </label>
               <input
@@ -96,14 +96,14 @@ export const ContactPage: React.FC = () => {
                 required
                 value={formData.companyName}
                 onChange={handleChange}
-                className="w-full px-4 py-4 bg-zinc-900 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:border-orange-500 transition-colors text-lg"
+                className="w-full px-4 py-4 bg-zinc-50 border border-zinc-300 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-colors text-lg"
                 placeholder="株式会社〇〇建設"
               />
             </div>
 
             {/* お名前 */}
             <div>
-              <label htmlFor="name" className="block text-sm font-bold text-zinc-300 mb-2">
+              <label htmlFor="name" className="block text-lg font-bold text-zinc-700 mb-2">
                 お名前 <span className="text-orange-500">*</span>
               </label>
               <input
@@ -113,14 +113,14 @@ export const ContactPage: React.FC = () => {
                 required
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-4 bg-zinc-900 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:border-orange-500 transition-colors text-lg"
+                className="w-full px-4 py-4 bg-zinc-50 border border-zinc-300 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-colors text-lg"
                 placeholder="山田 太郎"
               />
             </div>
 
             {/* メールアドレス */}
             <div>
-              <label htmlFor="email" className="block text-sm font-bold text-zinc-300 mb-2">
+              <label htmlFor="email" className="block text-lg font-bold text-zinc-700 mb-2">
                 メールアドレス <span className="text-orange-500">*</span>
               </label>
               <input
@@ -130,14 +130,14 @@ export const ContactPage: React.FC = () => {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-4 bg-zinc-900 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:border-orange-500 transition-colors text-lg"
+                className="w-full px-4 py-4 bg-zinc-50 border border-zinc-300 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-colors text-lg"
                 placeholder="example@company.co.jp"
               />
             </div>
 
             {/* 電話番号 */}
             <div>
-              <label htmlFor="phone" className="block text-sm font-bold text-zinc-300 mb-2">
+              <label htmlFor="phone" className="block text-lg font-bold text-zinc-700 mb-2">
                 電話番号
               </label>
               <input
@@ -146,14 +146,14 @@ export const ContactPage: React.FC = () => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full px-4 py-4 bg-zinc-900 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:border-orange-500 transition-colors text-lg"
+                className="w-full px-4 py-4 bg-zinc-50 border border-zinc-300 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-colors text-lg"
                 placeholder="03-1234-5678"
               />
             </div>
 
             {/* ご検討中のプラン */}
             <div>
-              <label htmlFor="plan" className="block text-sm font-bold text-zinc-300 mb-2">
+              <label htmlFor="plan" className="block text-lg font-bold text-zinc-700 mb-2">
                 ご検討中のプラン
               </label>
               <select
@@ -161,7 +161,7 @@ export const ContactPage: React.FC = () => {
                 name="plan"
                 value={formData.plan}
                 onChange={handleChange}
-                className="w-full px-4 py-4 bg-zinc-900 border border-zinc-700 text-white focus:outline-none focus:border-orange-500 transition-colors text-lg appearance-none cursor-pointer"
+                className="w-full px-4 py-4 bg-zinc-50 border border-zinc-300 text-zinc-900 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-colors text-lg appearance-none cursor-pointer"
               >
                 <option value="">選択してください</option>
                 <option value="伴走プラン">伴走プラン（月10万円）</option>
@@ -173,7 +173,7 @@ export const ContactPage: React.FC = () => {
 
             {/* ご相談内容 */}
             <div>
-              <label htmlFor="message" className="block text-sm font-bold text-zinc-300 mb-2">
+              <label htmlFor="message" className="block text-lg font-bold text-zinc-700 mb-2">
                 ご相談内容・ご質問など
               </label>
               <textarea
@@ -182,7 +182,7 @@ export const ContactPage: React.FC = () => {
                 rows={5}
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full px-4 py-4 bg-zinc-900 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:border-orange-500 transition-colors text-lg resize-none"
+                className="w-full px-4 py-4 bg-zinc-50 border border-zinc-300 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-colors text-lg resize-none"
                 placeholder="現在のお悩みや、ご質問があればご記入ください"
               />
             </div>
@@ -193,7 +193,7 @@ export const ContactPage: React.FC = () => {
                 type="submit"
                 variant="primary"
                 size="xl"
-                className="w-full text-xl"
+                className="w-full text-2xl font-black tracking-wide [text-shadow:_0_2px_4px_rgb(0_0_0_/_50%)]"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? (
@@ -216,7 +216,7 @@ export const ContactPage: React.FC = () => {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-white/10 py-8 px-6">
+      <footer className="border-t border-zinc-200 py-8 px-6 bg-zinc-50">
         <div className="max-w-4xl mx-auto text-center text-zinc-500 text-sm">
           © 2026 株式会社ノヴァリス
         </div>
