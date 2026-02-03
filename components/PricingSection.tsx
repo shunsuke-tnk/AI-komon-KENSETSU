@@ -10,7 +10,7 @@ const plans = [
     description: 'AI活用の第一歩を踏み出したい企業様に。専門家がいつでも相談に乗り、最適な活用方法をアドバイスします。',
     price: '15万円',
     discountPrice: '10',
-    target: 'まずはAI活用を始めたい方向け',
+    target: 'まずはAI活用を始めたい方',
     features: [
       { icon: MessageSquare, title: 'チャット相談 無制限', desc: 'Slackで24時間いつでも質問OK' },
       { icon: Video, title: 'キックオフMTG', desc: '現状把握と目標設定（90分）' },
@@ -24,7 +24,7 @@ const plans = [
     description: '社員がAIを使いこなせるようになる研修付きプラン。内製化を目指す企業様におすすめです。',
     price: '40万円',
     discountPrice: '30',
-    target: '社員にAIスキルを身につけさせたい方向け',
+    target: '社員にAIスキルを身につけさせたい方',
     features: [
       { icon: MessageSquare, title: '伴走プランの全内容', desc: 'チャット相談・MTG・レポート全て込み' },
       { icon: Users, title: '社員研修（4名まで）', desc: '実践的なAI活用スキルを習得' },
@@ -37,7 +37,7 @@ const plans = [
     description: '業務を自動化するAIエージェントをオーダーメイドで開発。「こんなツールがほしい」を形にします。',
     price: '60万円',
     discountPrice: '50',
-    target: '「これを作ってほしい」がある方向け',
+    target: '「これを作ってほしい」がある方',
     features: [
       { icon: Video, title: '要件整理MTG', desc: '何を作るか一緒に決めます' },
       { icon: Video, title: '月1開発MTG', desc: '進捗確認とフィードバック' },
@@ -60,7 +60,7 @@ export const PricingSection: React.FC = () => {
         {plans.map((plan, index) => (
           <div
             key={index}
-            className="relative p-8 md:p-10 border border-zinc-700 bg-zinc-900/60 hover:border-orange-500/50 transition-all duration-300 group"
+            className="relative p-8 md:p-10 border border-zinc-700 bg-zinc-900/60 hover:border-orange-500/50 transition-all duration-300 group flex flex-col h-full"
           >
             {/* Plan Header */}
             <div className="mb-8">
@@ -90,8 +90,8 @@ export const PricingSection: React.FC = () => {
               {plan.description}
             </p>
 
-            {/* Features */}
-            <div className="space-y-6 mb-10">
+            {/* Features - flex-grow で残りのスペースを埋める */}
+            <div className="space-y-6 mb-10 flex-grow">
               {plan.features.map((feature, fIndex) => (
                 <div key={fIndex} className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-lg bg-orange-500/10 border border-orange-500/30 flex items-center justify-center shrink-0">
@@ -106,8 +106,8 @@ export const PricingSection: React.FC = () => {
             </div>
 
             {/* Target */}
-            <div className="mb-8 p-4 bg-zinc-800/80 border-l-4 border-orange-500">
-              <p className="text-zinc-300 text-base font-medium">{plan.target}</p>
+            <div className="mb-8 p-4 bg-zinc-800/80 border-l-4 border-orange-500 h-14 flex items-center">
+              <p className="text-zinc-300 text-base font-medium whitespace-nowrap">{plan.target}</p>
             </div>
 
             {/* CTA */}
