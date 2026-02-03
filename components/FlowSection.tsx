@@ -1,32 +1,6 @@
 import React from 'react';
 import { Section } from './ui/Section';
-
-const flowSteps = [
-  {
-    step: '01',
-    title: '無料AI活用診断',
-    desc: 'Zoom（30分）で現状の業務をヒアリング。改善ポイントを洗い出し、「何が改善できて、何ができないか」を明確化します。',
-    highlight: true,
-  },
-  {
-    step: '02',
-    title: 'ロードマップ提示',
-    desc: '「何を」「どの順番で」改善するかを明確化。「これとこれを改善するなら約◯ヶ月」という絵を提示します。',
-    highlight: false,
-  },
-  {
-    step: '03',
-    title: 'ご契約',
-    desc: 'プランを選択し、契約を締結。ご不明点があればこの段階で何でもご質問ください。',
-    highlight: false,
-  },
-  {
-    step: '04',
-    title: 'サービス開始',
-    desc: 'キックオフミーティングから開始。チャット相談もスタートし、AI活用の伴走がはじまります。',
-    highlight: false,
-  },
-];
+import { ArrowDown } from 'lucide-react';
 
 export const FlowSection: React.FC = () => {
   return (
@@ -45,39 +19,112 @@ export const FlowSection: React.FC = () => {
         </h2>
       </div>
 
-      {/* Flow Steps - Centered */}
-      <div className="max-w-3xl mx-auto">
-        <div className="relative">
-          {/* Vertical Line */}
-          <div className="absolute left-0 top-2 bottom-0 w-[2px] bg-zinc-800"></div>
+      {/* Flow Steps - Vertical Cards */}
+      <div className="max-w-3xl mx-auto space-y-4">
 
-          <div className="space-y-10">
-            {flowSteps.map((item, i) => (
-              <div key={i} className="relative pl-12 group">
-                {/* Dot */}
-                <div className={`absolute left-[-5px] top-2 w-[12px] h-[12px] border-2 ${
-                  item.highlight
-                    ? 'bg-orange-500 border-orange-500'
-                    : 'bg-black border-zinc-500 group-hover:bg-orange-500 group-hover:border-orange-500'
-                } transition-colors`}></div>
-
-                <div className="text-sm font-mono text-orange-500 mb-2">STEP {item.step}</div>
-                <h4 className={`text-2xl font-bold mb-3 ${
-                  item.highlight ? 'text-orange-500' : 'group-hover:text-orange-500'
-                } transition-colors`}>
-                  {item.title}
-                </h4>
-                <p className="text-zinc-400 leading-relaxed text-lg">{item.desc}</p>
-
-                {item.highlight && (
-                  <div className="mt-4 inline-block px-3 py-1 bg-orange-500/20 border border-orange-500/30 text-orange-500 text-sm font-bold">
-                    無料・押し売り一切なし
-                  </div>
-                )}
+        {/* STEP 01 - Highlighted */}
+        <div className="bg-gradient-to-r from-amber-900/50 via-amber-900/30 to-zinc-900 border-2 border-amber-500/60 p-6 md:p-8">
+          <div className="flex items-start gap-6">
+            <div className="flex-shrink-0">
+              <span className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-amber-300 via-amber-500 to-amber-700">
+                01
+              </span>
+            </div>
+            <div className="flex-1">
+              <h3 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-500 mb-3">
+                無料AI活用診断
+              </h3>
+              <p className="text-zinc-300 text-base md:text-lg leading-relaxed mb-4">
+                Zoomで30分、御社の業務をヒアリング。<br className="hidden md:block" />
+                「AIで何が改善できて、何ができないか」を具体的にお伝えします。
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-4 py-2 bg-amber-500/20 border border-amber-500/40 text-amber-300 text-sm font-bold">
+                  完全無料
+                </span>
+                <span className="px-4 py-2 bg-amber-500/20 border border-amber-500/40 text-amber-300 text-sm font-bold">
+                  Zoom 30分
+                </span>
+                <span className="px-4 py-2 bg-amber-500/20 border border-amber-500/40 text-amber-300 text-sm font-bold">
+                  押し売り一切なし
+                </span>
               </div>
-            ))}
+            </div>
           </div>
         </div>
+
+        {/* Arrow */}
+        <div className="flex justify-center py-2">
+          <ArrowDown className="text-amber-500/50" size={28} />
+        </div>
+
+        {/* STEP 02 */}
+        <div className="bg-zinc-900 border border-zinc-800 p-6 md:p-8">
+          <div className="flex items-start gap-6">
+            <div className="flex-shrink-0">
+              <span className="text-4xl md:text-5xl font-black text-zinc-600">
+                02
+              </span>
+            </div>
+            <div className="flex-1">
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+                ロードマップ提示
+              </h3>
+              <p className="text-zinc-400 text-base leading-relaxed">
+                「何を」「どの順番で」改善するか、具体的な計画と期間をご提示します。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Arrow */}
+        <div className="flex justify-center py-2">
+          <ArrowDown className="text-zinc-700" size={28} />
+        </div>
+
+        {/* STEP 03 */}
+        <div className="bg-zinc-900 border border-zinc-800 p-6 md:p-8">
+          <div className="flex items-start gap-6">
+            <div className="flex-shrink-0">
+              <span className="text-4xl md:text-5xl font-black text-zinc-600">
+                03
+              </span>
+            </div>
+            <div className="flex-1">
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+                ご契約
+              </h3>
+              <p className="text-zinc-400 text-base leading-relaxed">
+                最適なプランをご選択。最初の1ヶ月は試用期間なので安心してスタートできます。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Arrow */}
+        <div className="flex justify-center py-2">
+          <ArrowDown className="text-zinc-700" size={28} />
+        </div>
+
+        {/* STEP 04 */}
+        <div className="bg-zinc-900 border border-zinc-800 p-6 md:p-8">
+          <div className="flex items-start gap-6">
+            <div className="flex-shrink-0">
+              <span className="text-4xl md:text-5xl font-black text-zinc-600">
+                04
+              </span>
+            </div>
+            <div className="flex-1">
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+                サービス開始
+              </h3>
+              <p className="text-zinc-400 text-base leading-relaxed">
+                キックオフMTGで目標を共有。Slackでいつでも相談できる体制で伴走します。
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </Section>
   );
