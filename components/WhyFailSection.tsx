@@ -59,27 +59,25 @@ export const WhyFailSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Right: Image Placeholder */}
-        <div className="aspect-[4/3] bg-zinc-900 border border-white/10 flex items-center justify-center">
-          <div className="text-center text-zinc-600">
-            <div className="w-16 h-16 mx-auto mb-4 border-2 border-zinc-700 rounded-lg flex items-center justify-center">
-              <span className="text-2xl">📊</span>
-            </div>
-            <p className="text-sm">画像を配置</p>
-          </div>
+        {/* Right: Image */}
+        <div className="aspect-[4/3] bg-zinc-900 border border-white/10 flex items-center justify-center overflow-hidden">
+          <img
+            src="/キーボード.png"
+            alt="キーボード"
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
 
       {/* Row 2: 左に画像 / 右にテキスト */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        {/* Left: Image Placeholder */}
-        <div className="aspect-[4/3] bg-zinc-900 border border-white/10 flex items-center justify-center order-2 lg:order-1">
-          <div className="text-center text-zinc-600">
-            <div className="w-16 h-16 mx-auto mb-4 border-2 border-zinc-700 rounded-lg flex items-center justify-center">
-              <span className="text-2xl">🤝</span>
-            </div>
-            <p className="text-sm">画像を配置</p>
-          </div>
+        {/* Left: Image */}
+        <div className="aspect-[4/3] bg-zinc-900 border border-white/10 flex items-center justify-center order-2 lg:order-1 overflow-hidden">
+          <img
+            src="/コンサル.png"
+            alt="コンサルティング"
+            className="w-full h-full object-cover"
+          />
         </div>
 
         {/* Right: Text Content */}
