@@ -3,7 +3,7 @@ import { Video, MessageSquare, CheckCircle, XCircle, ArrowRight } from 'lucide-r
 
 export const CTASection: React.FC = () => {
   return (
-    <div className="bg-gradient-to-br from-amber-100 via-yellow-200 to-amber-300 text-black py-24 md:py-32 px-6 overflow-hidden relative">
+    <div className="bg-gradient-to-br from-white via-gray-50 to-gray-100 text-black py-24 md:py-32 px-6 overflow-hidden relative">
       <div className="absolute top-0 left-0 w-full h-full opacity-5 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
 
       <div className="max-w-[1200px] mx-auto relative z-10">
