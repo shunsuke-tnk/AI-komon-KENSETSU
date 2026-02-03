@@ -28,44 +28,26 @@ const flowSteps = [
   },
 ];
 
-const contractTerms = [
-  { label: '最低契約期間', value: '3ヶ月' },
-  { label: '試用期間', value: '最初の1ヶ月' },
-  { label: '支払い', value: '月額・前払い' },
-];
-
 export const FlowSection: React.FC = () => {
   return (
     <Section id="flow">
-      <div className="flex flex-col lg:flex-row gap-16">
-        {/* Left: Contract Terms */}
-        <div className="lg:w-1/3">
-          <h2 className="text-5xl font-black tracking-tighter mb-8">FLOW</h2>
-          <p className="text-zinc-500 text-base mb-8">契約条件・ご利用の流れ</p>
-
-          <div className="p-6 border border-white/10 bg-zinc-900/30">
-            <h3 className="text-base font-bold text-orange-500 mb-6 tracking-widest uppercase">Contract Terms</h3>
-            <div className="space-y-4 text-base">
-              {contractTerms.map((term, index) => (
-                <div key={index} className="flex justify-between border-b border-white/5 pb-3">
-                  <span className="text-zinc-500">{term.label}</span>
-                  <span className="text-white font-medium">{term.value}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Trial Period Note */}
-          <div className="mt-6 p-4 bg-orange-500/10 border border-orange-500/30">
-            <p className="text-base text-zinc-300">
-              <span className="text-orange-500 font-bold">試用期間について：</span><br />
-              最初の1ヶ月は「試用期間」です。万が一「合わない」と感じた場合は、1ヶ月で終了可能です。
-            </p>
-          </div>
+      {/* Header with Background Text */}
+      <div className="relative text-center mb-16 md:mb-20">
+        {/* Background FLOW text */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
+          <span className="text-[12rem] md:text-[18rem] font-black text-zinc-800/30 tracking-tighter select-none">
+            FLOW
+          </span>
         </div>
+        {/* Main Title */}
+        <h2 className="relative text-4xl md:text-6xl font-black tracking-tight">
+          ご利用の流れ
+        </h2>
+      </div>
 
-        {/* Right: Flow Steps */}
-        <div className="lg:w-2/3 relative">
+      {/* Flow Steps - Centered */}
+      <div className="max-w-3xl mx-auto">
+        <div className="relative">
           {/* Vertical Line */}
           <div className="absolute left-0 top-2 bottom-0 w-[2px] bg-zinc-800"></div>
 
