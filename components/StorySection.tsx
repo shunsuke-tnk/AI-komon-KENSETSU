@@ -173,7 +173,7 @@ export const StorySection: React.FC = () => {
                         売上の上げ方を知っています。<br />
                         現場の痛みを、身をもって知っています。
                     </p>
-                    <p className="text-3xl md:text-4xl font-bold text-white">
+                    <p className="text-3xl md:text-4xl font-bold text-white whitespace-nowrap">
                         だから、<span className="text-orange-500">建設業に特化したサービス</span>を作りました。
                     </p>
                 </div>
