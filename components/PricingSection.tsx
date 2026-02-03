@@ -51,8 +51,8 @@ export const PricingSection: React.FC = () => {
   return (
     <Section id="pricing">
       {/* Header */}
-      <div className="text-center mb-16 md:mb-24">
-        <h2 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-6">PLANS</h2>
+      <div className="text-center mb-12 md:mb-24">
+        <h2 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-6">PLANS</h2>
         <p className="text-xl md:text-2xl text-zinc-400">御社の状況に合わせて、3つのプランからお選びください</p>
       </div>
 
@@ -61,7 +61,7 @@ export const PricingSection: React.FC = () => {
         {plans.map((plan, index) => (
           <div
             key={index}
-            className="relative p-8 md:p-10 border border-zinc-700 bg-zinc-900/60 hover:border-orange-500/50 transition-all duration-300 group flex flex-col h-full"
+            className="relative p-5 sm:p-8 md:p-10 border border-zinc-700 bg-zinc-900/60 hover:border-orange-500/50 transition-all duration-300 group flex flex-col h-full"
           >
             {/* Plan Header */}
             <div className="mb-8">
@@ -77,11 +77,11 @@ export const PricingSection: React.FC = () => {
                 <span className="text-zinc-600 line-through text-xl">¥{plan.price}</span>
                 <span className="text-orange-500 text-sm font-bold">モニター価格</span>
               </div>
-              <div className="flex items-baseline gap-2 mt-2">
-                <span className="text-6xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600">
+              <div className="flex items-baseline gap-1 sm:gap-2 mt-2">
+                <span className="text-4xl sm:text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600">
                   ¥{plan.discountPrice}
                 </span>
-                <span className="text-2xl text-zinc-400 font-bold">万円</span>
+                <span className="text-xl sm:text-2xl text-zinc-400 font-bold">万円</span>
                 <span className="text-lg text-zinc-500 font-mono">/ 月</span>
               </div>
             </div>
@@ -107,15 +107,15 @@ export const PricingSection: React.FC = () => {
             </div>
 
             {/* Target */}
-            <div className="mb-8 p-4 bg-zinc-800/80 border-l-4 border-orange-500 h-14 flex items-center">
-              <p className="text-zinc-300 text-base font-medium whitespace-nowrap">{plan.target}</p>
+            <div className="mb-8 p-4 bg-zinc-800/80 border-l-4 border-orange-500 min-h-14 flex items-center">
+              <p className="text-zinc-300 text-sm sm:text-base font-medium">{plan.target}</p>
             </div>
 
             {/* CTA */}
             <Link to="/contact">
               <Button
                 variant="primary"
-                className="w-full text-xl py-5 group-hover:bg-orange-400 transition-colors"
+                className="w-full text-base sm:text-xl py-4 sm:py-5 group-hover:bg-orange-400 transition-colors"
               >
                 無料でまずは相談する
                 <ArrowRight className="ml-2 inline-block" size={20} />

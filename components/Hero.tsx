@@ -36,16 +36,16 @@ export const Hero: React.FC = () => {
                         「AIを使いたいけど、何から始めれば...」
                     </p>
 
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight mb-8">
+                    <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight mb-8">
                         建設業専門のAI顧問が、<br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600">月10万円で御社に</span>
                     </h1>
 
                     {/* Sub Copy */}
-                    <div className="border-l-2 border-orange-500 pl-6 mb-10">
-                        <p className="text-zinc-300 text-lg md:text-xl leading-relaxed mb-3">
+                    <div className="border-l-2 border-orange-500 pl-4 sm:pl-6 mb-10">
+                        <p className="text-zinc-300 text-base sm:text-lg md:text-xl leading-relaxed mb-3">
                             <span className="text-white font-bold">複数回全国トップセールス獲得</span>
-                            <span className="text-zinc-500 mx-2">・</span>
+                            <span className="text-zinc-500 mx-1 sm:mx-2">・</span>
                             <span className="text-white font-bold">5年連続 個人年間売上2億円</span>
                         </p>
                         <p className="text-zinc-400 text-lg md:text-xl leading-relaxed">
@@ -56,7 +56,7 @@ export const Hero: React.FC = () => {
 
                     <div className="flex flex-col sm:flex-row gap-6">
                         <Link to="/contact">
-                            <Button size="xl" icon className="text-2xl">
+                            <Button size="lg" icon className="text-sm sm:text-xl md:text-2xl px-6 sm:px-10 py-4 sm:py-5 whitespace-nowrap">
                                 無料AI活用診断に申し込む
                             </Button>
                         </Link>
@@ -68,7 +68,7 @@ export const Hero: React.FC = () => {
                 </div>
 
                 <div className="lg:col-span-4 flex flex-col justify-end items-start lg:items-end">
-                    <div className="glass-card p-6 border border-white/10 bg-zinc-900/50 backdrop-blur-md max-w-sm">
+                    <div className="glass-card p-4 sm:p-6 border border-white/10 bg-zinc-900/50 backdrop-blur-md w-full sm:max-w-sm">
                         <div className="text-sm text-zinc-500 mb-3 uppercase tracking-wider font-mono">こんな方へ</div>
                         <ul className="space-y-4 text-base font-medium">
                             <li className="flex items-center gap-3">

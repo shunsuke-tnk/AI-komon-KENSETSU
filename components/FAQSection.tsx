@@ -42,8 +42,8 @@ export const FAQSection: React.FC = () => {
 
   return (
     <Section id="faq">
-      <div className="text-center mb-16">
-        <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-4">FAQ</h2>
+      <div className="text-center mb-10 md:mb-16">
+        <h2 className="text-3xl sm:text-5xl md:text-7xl font-black tracking-tighter mb-4">FAQ</h2>
         <p className="text-zinc-500 font-mono uppercase text-base">よくある質問</p>
       </div>
 
@@ -51,10 +51,10 @@ export const FAQSection: React.FC = () => {
         {faqs.map((faq, index) => (
           <div key={index} className="border-b border-white/10">
             <button
-              className="w-full py-6 flex items-center justify-between text-left group"
+              className="w-full py-4 sm:py-6 flex items-center justify-between text-left group"
               onClick={() => toggleFAQ(index)}
             >
-              <span className="text-xl font-medium pr-8 group-hover:text-orange-500 transition-colors">
+              <span className="text-base sm:text-lg md:text-xl font-medium pr-4 sm:pr-8 group-hover:text-orange-500 transition-colors">
                 Q. {faq.question}
               </span>
               <ChevronDown
@@ -69,8 +69,8 @@ export const FAQSection: React.FC = () => {
                 openIndex === index ? 'max-h-96 pb-6' : 'max-h-0'
               }`}
             >
-              <div className="pl-6 border-l-2 border-orange-500">
-                <p className="text-zinc-400 leading-relaxed text-lg">{faq.answer}</p>
+              <div className="pl-4 sm:pl-6 border-l-2 border-orange-500">
+                <p className="text-zinc-400 leading-relaxed text-base sm:text-lg">{faq.answer}</p>
               </div>
             </div>
           </div>

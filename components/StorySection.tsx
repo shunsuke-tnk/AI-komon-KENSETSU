@@ -120,57 +120,57 @@ export const StorySection: React.FC = () => {
             </div>
 
             {/* Results Section */}
-            <div className="bg-zinc-50 text-black p-10 md:p-16">
-                <h3 className="text-2xl font-bold mb-10 text-zinc-600 text-center">その結果——</h3>
+            <div className="bg-zinc-50 text-black p-6 sm:p-10 md:p-16">
+                <h3 className="text-2xl font-bold mb-8 sm:mb-10 text-zinc-600 text-center">その結果——</h3>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 max-w-6xl mx-auto">
                     {/* Stat 1 */}
-                    <div className="text-center p-6 bg-white border border-zinc-200 shadow-sm">
-                        <Clock className="text-orange-500 mx-auto mb-4" size={32} />
-                        <div className="text-zinc-500 text-sm font-mono mb-2">見積もり作成</div>
-                        <div className="font-black text-2xl">
-                            <span className="text-zinc-400 line-through text-xl">2h</span>
-                            <span className="text-orange-500 mx-2">→</span>
+                    <div className="text-center p-3 sm:p-6 bg-white border border-zinc-200 shadow-sm">
+                        <Clock className="text-orange-500 mx-auto mb-2 sm:mb-4" size={24} />
+                        <div className="text-zinc-500 text-xs sm:text-sm font-mono mb-1 sm:mb-2">見積もり作成</div>
+                        <div className="font-black text-base sm:text-2xl">
+                            <span className="text-zinc-400 line-through text-sm sm:text-xl">2h</span>
+                            <span className="text-orange-500 mx-1 sm:mx-2">→</span>
                             <span>10min</span>
                         </div>
                     </div>
 
                     {/* Stat 2 */}
-                    <div className="text-center p-6 bg-white border border-zinc-200 shadow-sm">
-                        <Users className="text-orange-500 mx-auto mb-4" size={32} />
-                        <div className="text-zinc-500 text-sm font-mono mb-2">勤務時間</div>
-                        <div className="font-black text-xl">
-                            <span className="text-zinc-400 text-base">0時残業</span>
-                            <span className="text-orange-500 mx-2">→</span>
-                            <span>定時帰り</span>
+                    <div className="text-center p-3 sm:p-6 bg-white border border-zinc-200 shadow-sm">
+                        <Users className="text-orange-500 mx-auto mb-2 sm:mb-4" size={24} />
+                        <div className="text-zinc-500 text-xs sm:text-sm font-mono mb-1 sm:mb-2">勤務時間</div>
+                        <div className="font-black text-sm sm:text-xl">
+                            <span className="text-zinc-400 text-xs sm:text-base">0時残業</span>
+                            <span className="text-orange-500 mx-1 sm:mx-2">→</span>
+                            <span className="block sm:inline">定時帰り</span>
                         </div>
                     </div>
 
                     {/* Stat 3 */}
-                    <div className="text-center p-6 bg-white border border-zinc-200 shadow-sm">
-                        <Award className="text-orange-500 mx-auto mb-4" size={32} />
-                        <div className="text-zinc-500 text-sm font-mono mb-2">セールス実績</div>
-                        <div className="font-black text-xl">
+                    <div className="text-center p-3 sm:p-6 bg-white border border-zinc-200 shadow-sm">
+                        <Award className="text-orange-500 mx-auto mb-2 sm:mb-4" size={24} />
+                        <div className="text-zinc-500 text-xs sm:text-sm font-mono mb-1 sm:mb-2">セールス実績</div>
+                        <div className="font-black text-sm sm:text-xl">
                             全国トップ<br />
-                            <span className="text-base text-zinc-600">複数回獲得</span>
+                            <span className="text-xs sm:text-base text-zinc-600">複数回獲得</span>
                         </div>
                     </div>
 
                     {/* Stat 4 */}
-                    <div className="text-center p-6 bg-white border border-zinc-200 shadow-sm">
-                        <TrendingUp className="text-orange-500 mx-auto mb-4" size={32} />
-                        <div className="text-zinc-500 text-sm font-mono mb-2">年間売上</div>
-                        <div className="font-black text-2xl">
+                    <div className="text-center p-3 sm:p-6 bg-white border border-zinc-200 shadow-sm">
+                        <TrendingUp className="text-orange-500 mx-auto mb-2 sm:mb-4" size={24} />
+                        <div className="text-zinc-500 text-xs sm:text-sm font-mono mb-1 sm:mb-2">年間売上</div>
+                        <div className="font-black text-lg sm:text-2xl">
                             2億円
-                            <span className="text-base text-zinc-600 block">5年連続</span>
+                            <span className="text-xs sm:text-base text-zinc-600 block">5年連続</span>
                         </div>
                     </div>
 
                     {/* Stat 5 */}
-                    <div className="text-center p-6 bg-white border border-zinc-200 shadow-sm col-span-2 md:col-span-1">
-                        <Building className="text-orange-500 mx-auto mb-4" size={32} />
-                        <div className="text-zinc-500 text-sm font-mono mb-2">会社実績</div>
-                        <div className="font-black text-lg">
+                    <div className="text-center p-3 sm:p-6 bg-white border border-zinc-200 shadow-sm col-span-2 md:col-span-1">
+                        <Building className="text-orange-500 mx-auto mb-2 sm:mb-4" size={24} />
+                        <div className="text-zinc-500 text-xs sm:text-sm font-mono mb-1 sm:mb-2">会社実績</div>
+                        <div className="font-black text-sm sm:text-lg">
                             創業40年で<br />
                             <span className="text-orange-600">過去最高売上</span>
                         </div>
@@ -186,14 +186,14 @@ export const StorySection: React.FC = () => {
                         売上の上げ方を知っています。<br />
                         現場の痛みを、身をもって知っています。
                     </p>
-                    <p className="text-3xl md:text-4xl font-bold text-white whitespace-nowrap">
+                    <p className="text-2xl md:text-4xl font-bold text-white">
                         だから、<span className="font-extrabold bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent">建設業に特化したサービス</span>を作りました。
                     </p>
 
                     {/* 中間コンバージョンボタン */}
                     <div className="mt-12">
                         <Link to="/contact">
-                            <Button variant="primary" size="xl" icon className="text-xl">
+                            <Button variant="primary" size="lg" icon className="text-sm sm:text-xl px-6 sm:px-10 py-4 sm:py-5 whitespace-nowrap">
                                 無料相談を予約する
                             </Button>
                         </Link>

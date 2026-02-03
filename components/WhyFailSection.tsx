@@ -5,13 +5,13 @@ import { AlertTriangle, Target, Users } from 'lucide-react';
 export const WhyFailSection: React.FC = () => {
   return (
     <Section id="why-fail">
-      <div className="mb-16 relative">
+      <div className="mb-12 md:mb-16 relative overflow-hidden">
         {/* 背景の WHY FAIL */}
-        <span className="absolute -top-4 left-0 text-[8rem] md:text-[12rem] font-black tracking-tighter text-white/5 select-none pointer-events-none leading-none">
+        <span className="absolute -top-4 left-0 text-[4rem] sm:text-[6rem] md:text-[12rem] font-black tracking-tighter text-white/5 select-none pointer-events-none leading-none">
           WHY FAIL
         </span>
         {/* 前面のタイトル */}
-        <h2 className="relative text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+        <h2 className="relative text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
           なぜ、多くの会社が<br />
           <span className="text-orange-500">AI導入に失敗する</span>のか
         </h2>
@@ -22,7 +22,7 @@ export const WhyFailSection: React.FC = () => {
         {/* Left: Text Content */}
         <div className="space-y-12">
           {/* 多くの人が想像する"効率化" */}
-          <div className="border-l-2 border-zinc-700 pl-8">
+          <div className="border-l-2 border-zinc-700 pl-4 sm:pl-8">
             <div className="flex items-center gap-3 mb-4">
               <AlertTriangle className="text-zinc-500" size={22} />
               <span className="text-sm font-mono text-zinc-500 uppercase tracking-wider">多くの人が想像する"効率化"</span>
@@ -38,7 +38,7 @@ export const WhyFailSection: React.FC = () => {
           </div>
 
           {/* 本当の効率化 */}
-          <div className="border-l-2 border-orange-500 pl-8">
+          <div className="border-l-2 border-orange-500 pl-4 sm:pl-8">
             <div className="flex items-center gap-3 mb-4">
               <Target className="text-orange-500" size={22} />
               <span className="text-sm font-mono text-orange-500 uppercase tracking-wider">本当の効率化とは</span>
@@ -48,7 +48,7 @@ export const WhyFailSection: React.FC = () => {
               <p>日報作成の中の、「文章を考える3分」を1分に。</p>
               <p>写真整理の中の、「ファイル名をつける2分」を30秒に。</p>
             </div>
-            <div className="mt-8 p-6 bg-zinc-900/50 border border-white/10">
+            <div className="mt-8 p-4 sm:p-6 bg-zinc-900/50 border border-white/10">
               <p className="text-white font-bold text-xl mb-2">5分の短縮を10個実現するだけで、50分。</p>
               <p className="text-white font-bold text-xl mb-4">これを10日やったら、500分。</p>
               <p className="text-zinc-400 text-base">
@@ -83,7 +83,7 @@ export const WhyFailSection: React.FC = () => {
         {/* Right: Text Content */}
         <div className="space-y-12 order-1 lg:order-2">
           {/* でも、アプリや外注では解決しない */}
-          <div className="border border-white/10 p-8 bg-black">
+          <div className="border border-white/10 p-4 sm:p-6 md:p-8 bg-black">
             <h3 className="text-2xl font-bold mb-6 text-white">でも、アプリや外注では解決しない</h3>
             <div className="space-y-4 text-zinc-400 text-base">
               <p>それを実現するには、アプリを入れるだけでは足りません。</p>
@@ -104,13 +104,13 @@ export const WhyFailSection: React.FC = () => {
           </div>
 
           {/* だから「AI顧問」という形を作りました */}
-          <div className="border-2 border-orange-500 p-8 bg-orange-500/5 relative">
-            <div className="absolute -top-4 left-6 bg-black px-4 py-1">
-              <span className="text-orange-500 font-bold text-base">SOLUTION</span>
+          <div className="border-2 border-orange-500 p-4 sm:p-6 md:p-8 bg-orange-500/5 relative">
+            <div className="absolute -top-4 left-4 sm:left-6 bg-black px-4 py-1">
+              <span className="text-orange-500 font-bold text-sm sm:text-base">SOLUTION</span>
             </div>
-            <div className="flex items-center gap-3 mb-6">
-              <Users className="text-orange-500" size={28} />
-              <h3 className="text-2xl font-bold text-white">だから、「AI顧問」という形を作りました</h3>
+            <div className="flex items-start gap-3 mb-6 pt-2">
+              <Users className="text-orange-500 shrink-0" size={24} />
+              <h3 className="text-lg sm:text-2xl font-bold text-white">だから、「AI顧問」という形を作りました</h3>
             </div>
             <div className="space-y-4">
               <p className="text-zinc-300 text-xl">常に寄り添ってくれる人。</p>

@@ -5,9 +5,9 @@ export const Footer: React.FC = () => {
     <footer className="bg-black py-8 px-6 border-t border-white/10">
       <div className="max-w-[1400px] mx-auto space-y-4">
         {/* 1行目: 企業情報 */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-6 text-sm text-zinc-400">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-6 text-xs sm:text-sm text-zinc-400 text-center">
           <span className="text-white font-bold">株式会社ノヴァリス</span>
-          <span>〒152-0004 東京都目黒区鷹番2丁目20番20号 イニッゾ学芸大学5-17</span>
+          <span className="break-words px-2">〒152-0004 東京都目黒区鷹番2丁目20番20号 イニッゾ学芸大学5-17</span>
           <a href="https://novalisgroup.jp/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
             novalisgroup.jp
           </a>

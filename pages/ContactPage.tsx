@@ -193,9 +193,12 @@ export const ContactPage: React.FC = () => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
+                pattern="^$|^\d{2,4}-\d{2,4}-\d{3,4}$"
+                title="ハイフンを含む形式で入力してください（例: 03-1234-5678）"
                 className="w-full px-4 py-4 bg-zinc-50 border border-zinc-300 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-colors text-lg"
                 placeholder="03-1234-5678"
               />
+              <p className="text-zinc-500 text-sm mt-1">※ ハイフン付きで入力してください（例: 03-1234-5678）</p>
             </div>
 
             {/* ご検討中のプラン */}

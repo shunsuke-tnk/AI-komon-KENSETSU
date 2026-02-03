@@ -17,10 +17,10 @@ export const ProblemSection: React.FC = () => {
     <Section id="issues" className="!bg-white !border-gray-200">
       {/* メイン見出し */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+        <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
           こんなお悩みありませんか？
         </h2>
-        <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
+        <p className="text-lg sm:text-xl md:text-2xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
           現場の忙しさに追われ、新しい技術を取り入れる余裕がない。<br />
           そんな経営者の悩みを解決します。
         </p>
@@ -28,7 +28,7 @@ export const ProblemSection: React.FC = () => {
 
       {/* チェックボックス付きリスト（1つのボックス） */}
       <div className="max-w-3xl mx-auto">
-        <div className="bg-gray-50 border border-gray-200 rounded-lg p-8 md:p-12">
+        <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 sm:p-8 md:p-12">
           <ul className="space-y-6">
             {problems.map((problem, index) => (
               <li key={index} className="flex items-start gap-4">
@@ -43,12 +43,12 @@ export const ProblemSection: React.FC = () => {
       </div>
 
       {/* 下部メッセージ */}
-      <div className="mt-16 text-center">
-        <div className="inline-block bg-gray-50 border border-gray-200 rounded-lg px-8 py-6 md:px-12 md:py-8">
-          <p className="text-2xl md:text-3xl text-gray-700 mb-4">
+      <div className="mt-12 md:mt-16 text-center">
+        <div className="inline-block bg-gray-50 border border-gray-200 rounded-lg px-4 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8">
+          <p className="text-lg sm:text-2xl md:text-3xl text-gray-700 mb-4">
             「AIを導入したいけど、どこから手をつければ...」
           </p>
-          <p className="text-xl md:text-2xl text-gray-900 leading-relaxed">
+          <p className="text-base sm:text-xl md:text-2xl text-gray-900 leading-relaxed">
             その悩み、建設業で<span className="text-orange-500 font-bold">毎日0時残業から定時帰り</span>を実現した私が、<br className="hidden md:block" />
             <span className="font-bold">0から一緒に解決します。</span>
           </p>

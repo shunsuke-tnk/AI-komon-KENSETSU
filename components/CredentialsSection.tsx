@@ -5,13 +5,13 @@ import { Award, Users, Building2, Briefcase } from 'lucide-react';
 const credentials = [
   {
     icon: Award,
-    title: '竹之内塾 講師',
-    description: '「令和の虎」竹之内教博社長運営の経営塾で生成AI講座を担当',
+    title: '竹之内塾 認定講師',
+    description: '人気YouTubeチャンネル「令和の虎」で有名な竹之内社長の経営塾で、認定講師として生成AI講座を歴任',
   },
   {
     icon: Users,
-    title: '複数の起業塾で指導',
-    description: '岩田塾、WORLD OF HAPIAなど、複数の起業塾で生成AI講座を担当',
+    title: '経営者向け講座を多数担当',
+    description: '起業塾・経営塾で延べ500名以上の経営者にAI活用講座を実施',
   },
   {
     icon: Building2,
@@ -28,8 +28,8 @@ const credentials = [
 export const CredentialsSection: React.FC = () => {
   return (
     <Section id="credentials">
-      <div className="text-center mb-16">
-        <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-4">CREDENTIALS</h2>
+      <div className="text-center mb-10 md:mb-16">
+        <h2 className="text-3xl sm:text-5xl md:text-7xl font-black tracking-tighter mb-4">CREDENTIALS</h2>
         <p className="text-zinc-500 font-mono uppercase text-base">指導実績</p>
       </div>
 
@@ -37,7 +37,7 @@ export const CredentialsSection: React.FC = () => {
         {credentials.map((credential, index) => (
           <div
             key={index}
-            className="p-8 border border-white/10 bg-zinc-900/30 hover:bg-zinc-900/50 transition-colors group"
+            className="p-4 sm:p-6 md:p-8 border border-white/10 bg-zinc-900/30 hover:bg-zinc-900/50 transition-colors group"
           >
             <credential.icon className="text-orange-500 mb-4 group-hover:scale-110 transition-transform" size={36} />
             <h3 className="text-xl font-bold mb-2 text-white">{credential.title}</h3>
