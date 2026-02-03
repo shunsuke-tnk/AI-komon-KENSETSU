@@ -70,9 +70,20 @@ export const StorySection: React.FC = () => {
 
                 {/* 続きのコンテンツ */}
                 <div className="py-12">
-                    <div className="space-y-8 text-white/90 leading-relaxed text-lg md:text-xl">
-                        <div className="space-y-4 pt-6 border-t border-white/20">
-                            <p className="text-xl md:text-2xl text-white">それだけではありません。</p>
+                    <p className="text-xl md:text-2xl text-white mb-8 pt-6 border-t border-white/20">それだけではありません。</p>
+
+                    {/* 画像とテキストが中央で重なる構成 */}
+                    <div className="relative">
+                        {/* 背景画像 - 右側から中央へ */}
+                        <div
+                            className="absolute top-0 bottom-0 right-0 w-full lg:w-[65%] bg-cover bg-right bg-no-repeat"
+                            style={{ backgroundImage: 'url(/IT夜明け.png)' }}
+                        />
+                        {/* 左から右へのグラデーションオーバーレイ */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/95 via-40% to-transparent" />
+
+                        {/* テキストコンテンツ - 左側から中央へ */}
+                        <div className="relative z-10 lg:w-[60%] space-y-8 text-white/90 leading-relaxed text-lg md:text-xl">
 
                             <div className="space-y-2 text-white/80">
                                 <p>経理書類や売上データ、集客データや報告書式など、</p>
