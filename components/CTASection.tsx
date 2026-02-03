@@ -11,7 +11,7 @@ export const CTASection: React.FC = () => {
         <div className="text-center mb-12">
           <p className="font-bold tracking-widest mb-4 uppercase text-base">Next Step</p>
           <h2 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] mb-8">
-            まずは無料診断から
+            まずは<span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-700">無料診断</span>から
           </h2>
         </div>
 
@@ -32,17 +32,17 @@ export const CTASection: React.FC = () => {
 
         {/* What You Get */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto mb-12">
-          <div className="bg-black/20 p-6 text-center">
+          <div className="bg-orange-500/40 p-6 text-center">
             <Video className="mx-auto mb-3" size={32} />
             <p className="font-bold text-lg">Zoomで実施</p>
             <p className="text-base opacity-80 mt-1">30分・オンライン</p>
           </div>
-          <div className="bg-black/20 p-6 text-center">
+          <div className="bg-orange-500/40 p-6 text-center">
             <MessageSquare className="mx-auto mb-3" size={32} />
             <p className="font-bold text-lg">業務ヒアリング</p>
             <p className="text-base opacity-80 mt-1">御社の課題を把握</p>
           </div>
-          <div className="bg-black/20 p-6 text-center">
+          <div className="bg-orange-500/40 p-6 text-center">
             <CheckCircle className="mx-auto mb-3" size={32} />
             <p className="font-bold text-lg">改善点を提示</p>
             <p className="text-base opacity-80 mt-1">優先順位もお伝え</p>
