@@ -46,7 +46,7 @@ export const ConceptSection: React.FC = () => {
       <div className="text-center mb-16 md:mb-24">
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
           AI人材を「採用」するのではなく、<br />
-          <span className="text-orange-500">「顧問」として迎える</span>
+          <span className="text-amber-500 text-4xl md:text-6xl lg:text-7xl font-black">「顧問」として迎える</span>
         </h2>
       </div>
 
@@ -58,7 +58,7 @@ export const ConceptSection: React.FC = () => {
           <div className="flex-1 text-center py-8 md:py-10 bg-zinc-800/80">
             <span className="text-zinc-300 font-bold text-2xl md:text-3xl tracking-wide">AI人材を採用</span>
           </div>
-          <div className="flex-1 text-center py-8 md:py-10 bg-orange-500">
+          <div className="flex-1 text-center py-8 md:py-10 bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-500">
             <span className="text-black font-black text-2xl md:text-3xl tracking-wide">AI顧問</span>
           </div>
         </div>
@@ -81,9 +81,9 @@ export const ConceptSection: React.FC = () => {
             </div>
 
             {/* Advisor - Positive */}
-            <div className="flex-1 py-8 md:py-10 px-5 md:px-10 bg-orange-500/10 border-l-4 border-orange-500">
+            <div className="flex-1 py-8 md:py-10 px-5 md:px-10 bg-amber-500/10 border-l-4 border-amber-500">
               <div className="flex items-center gap-4 mb-3">
-                <span className="text-orange-500 text-2xl md:text-3xl font-bold">✓</span>
+                <span className="text-amber-500 text-2xl md:text-3xl font-bold">✓</span>
                 <span className="text-white font-black text-xl md:text-2xl leading-tight">{row.advisor}</span>
               </div>
               <p className="text-zinc-400 text-base md:text-lg pl-10 md:pl-12">{row.advisorNote}</p>
