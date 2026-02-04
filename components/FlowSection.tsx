@@ -109,7 +109,7 @@ export const FlowSection: React.FC = () => {
                 サービス開始
               </h3>
               <p className="text-slate-800 text-base leading-relaxed">
-                キックオフMTGで目標を共有。Slackでいつでも相談できる体制で伴走します。
+                キックオフMTGで目標を共有。いつでも相談できる体制で伴走します。
               </p>
             </div>
           </div>
